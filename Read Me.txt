@@ -1,0 +1,6 @@
+*Use SQL files in Database folder to create database.
+	Data - Demo values only
+	Structre and Data - Table creating and add demo values
+	Structure - Table creations only
+
+*Edit credentials.properties file in the src folder using a text editer and change the database name and access permissions.

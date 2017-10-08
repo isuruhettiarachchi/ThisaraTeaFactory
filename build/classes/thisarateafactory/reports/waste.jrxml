@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="847fbfde-fff7-4474-b252-a49862401419">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     sale.`Bill_No` AS sale_Bill_No,
+     sale.`Buyers_Type` AS sale_Buyers_Type,
+     sale.`Date` AS sale_Date,
+     sale.`Discount` AS sale_Discount,
+     sale.`Cost` AS sale_Cost,
+     sale.`DiscountAmount` AS sale_DiscountAmount,
+     sale.`Totalcost` AS sale_Totalcost
+FROM
+     `sale` sale]]>
+	</queryString>
+	<field name="sale_Bill_No" class="java.lang.Integer"/>
+	<field name="sale_Buyers_Type" class="java.lang.String"/>
+	<field name="sale_Date" class="java.sql.Date"/>
+	<field name="sale_Discount" class="java.lang.Double"/>
+	<field name="sale_Cost" class="java.lang.Double"/>
+	<field name="sale_DiscountAmount" class="java.lang.Double"/>
+	<field name="sale_Totalcost" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="270" y="0" width="263" height="62" uuid="ba45e450-f635-4353-8575-333bb772183f"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Waste Sales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="301" y="74" width="196" height="22" uuid="86debcfa-bd5a-4c18-962a-5824d26c8b2d"/>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Sammary of Waste Sales]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="d710369e-b748-4930-9c4f-6fcd90c8e935"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="114" height="15" forecolor="#736343" uuid="e2e047fe-b379-4384-9e05-0286b0de7af1"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Bill No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="228" y="0" width="114" height="15" forecolor="#736343" uuid="cd3c48f0-102a-4b02-9a5a-c9a19e4ef5d5"/>
+				<text><![CDATA[Sale Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="342" y="0" width="114" height="15" forecolor="#736343" uuid="49af6dba-b0bb-437a-9f31-ce59b257ea20"/>
+				<text><![CDATA[Sale Discount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="456" y="0" width="114" height="15" forecolor="#736343" uuid="ced17655-918c-46a7-8761-87fe298c8e60"/>
+				<text><![CDATA[Sale Cost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="570" y="0" width="114" height="15" forecolor="#736343" uuid="4e2c2bdd-5056-4d7f-b195-85d9f6c1bfed"/>
+				<text><![CDATA[Discount Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="684" y="0" width="114" height="15" forecolor="#736343" uuid="51ca1848-42fb-49e9-ace1-1e4cba58328b"/>
+				<text><![CDATA[Total Cost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="114" y="1" width="114" height="15" forecolor="#736343" uuid="3656cd53-7c6e-4d13-b91d-54e0addf5360"/>
+				<text><![CDATA[Buyer Date]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="0b5bb386-85aa-4605-81d8-df14bc59e96e"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="0" y="0" width="114" height="15" uuid="d826efd8-2156-401a-8a10-31df66d3ab97"/>
+					<textFieldExpression><![CDATA[$F{sale_Bill_No}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="114" y="0" width="114" height="15" uuid="66fe417a-de74-423d-a857-66e1d579350d"/>
+					<textFieldExpression><![CDATA[$F{sale_Buyers_Type}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="228" y="0" width="114" height="15" uuid="9a131acb-8a9a-499d-9b5d-8502b8c346d8"/>
+					<textFieldExpression><![CDATA[$F{sale_Date}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="342" y="0" width="114" height="15" uuid="10478057-74e7-4a83-bff4-e08ef89701d2"/>
+					<textFieldExpression><![CDATA[$F{sale_Discount}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="456" y="0" width="114" height="15" uuid="4499eb9d-7d52-45dd-9c90-1600d5d22111"/>
+					<textFieldExpression><![CDATA[$F{sale_Cost}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="570" y="0" width="114" height="15" uuid="fe620959-9983-4c68-80c0-b7c19fb7e9e6"/>
+					<textFieldExpression><![CDATA[$F{sale_DiscountAmount}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="684" y="0" width="114" height="15" uuid="dbfac433-5695-460c-9ef1-4894aa43b104"/>
+					<textFieldExpression><![CDATA[$F{sale_Totalcost}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="bcb30f26-539e-48a3-8c92-5fc3b81d83f2"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

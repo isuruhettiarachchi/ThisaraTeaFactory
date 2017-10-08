@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="978.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thisarateafactory.ui.Sales.ui.salessummary.SalesSummaryController">
+   <children>
+      <Pane layoutX="159.0" layoutY="117.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="50.0" prefWidth="978.0" style="-fx-background-color: #00796B;">
+               <children>
+                  <Label text="Sales Details" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutY="50.0" prefHeight="550.0" prefWidth="978.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="300.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <children>
+                        <JFXTextField fx:id="txtLotNo" labelFloat="true" promptText="Lot Number">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXComboBox fx:id="txtInvoiceNo" prefHeight="25.0" prefWidth="105.0" promptText="Invoice Number">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXComboBox>
+                        <JFXTextArea fx:id="txtBuyerDetails" labelFloat="true" prefHeight="100.0" promptText="Buyer Details">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextArea>
+                        <JFXTextField fx:id="txtNetWeight" labelFloat="true" promptText="Net Weight">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtGrossWeight" labelFloat="true" promptText="Gross Weight">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXComboBox fx:id="txtGrade" labelFloat="true" prefWidth="300.0" promptText="Grade">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXComboBox>
+                        <JFXTextField fx:id="txtChest" labelFloat="true" promptText="Chest">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtPrice" labelFloat="true" promptText="Price">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtSampleWeight" labelFloat="true" promptText="Sample Weight">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="530.0" prefWidth="986.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <children>
+                        <TableView fx:id="tblSalesSummary" prefHeight="419.0" prefWidth="474.0">
+                          <columns>
+                            <TableColumn fx:id="clmLotNo" prefWidth="55.0" text="LotNo" />
+                            <TableColumn fx:id="clmInvoiceNo" prefWidth="68.0" text="InvoiceNo" />
+                              <TableColumn fx:id="clmBuyerDetails" prefWidth="94.0" text="BuyerDetails" />
+                              <TableColumn fx:id="clmGrade" prefWidth="62.0" text="Grade" />
+                              <TableColumn fx:id="clmChest" minWidth="8.0" prefWidth="54.0" text="Chest" />
+                              <TableColumn fx:id="clmPrice" prefWidth="57.0" text="Price" />
+                              <TableColumn fx:id="clmGrossWeight" prefWidth="98.0" text="GrossWeight" />
+                              <TableColumn fx:id="clmSampleweight" prefWidth="104.0" text="Sampleweight" />
+                              <TableColumn fx:id="clmNetWeight" prefWidth="93.0" text="NetWeight" />
+                              <TableColumn fx:id="clmGrossProceed" prefWidth="105.0" text="GrossProceed" />
+                          </columns>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </TableView>
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="480.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                           </VBox.margin>
+                           <children>
+                              <JFXButton fx:id="btnCalculate" onAction="#calculateButtonPressed" prefHeight="25.0" prefWidth="189.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="Calculate Total Gross Proceed" />
+                              <JFXTextField fx:id="txtTotGrossWeight" labelFloat="true" promptText="Total Gross Proceed">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <JFXButton onAction="#generateReport" prefWidth="100.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="Report" />
+                              <JFXButton fx:id="btnAdd" onAction="#addButtonPressed" prefWidth="100.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="Add">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="btnUpdate" onAction="#updateButtonPressed" prefWidth="100.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="Update">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="btnDelete" onAction="#deleteButtonPressed" prefWidth="100.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="Delete">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="btnCancel" onAction="#clearButtonPressed" prefWidth="100.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="Cancel">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="btnNew" onAction="#newButtonPressed" prefWidth="100.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="New" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

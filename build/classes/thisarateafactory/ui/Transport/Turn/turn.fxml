@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="580.0" prefWidth="828.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thisarateafactory.ui.Transport.Turn.TurnController">
+   <children>
+      <HBox layoutX="81.0" layoutY="109.0" prefHeight="501.0" prefWidth="758.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="300.0">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <children>
+                  <HBox prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Label prefWidth="100.0" text="Turn ID :">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="turnidL" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <JFXComboBox fx:id="dcomboB" labelFloat="true" prefWidth="300.0" promptText="Driver">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXComboBox>
+                  <JFXComboBox fx:id="adcomboB" labelFloat="true" prefWidth="300.0" promptText="Assistant Driver">
+                     <VBox.margin>
+                        <Insets bottom="13.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXComboBox>
+                  <JFXComboBox fx:id="vcomboB" labelFloat="true" prefHeight="25.0" prefWidth="280.0" promptText="Vehicle No">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </JFXComboBox>
+                  <HBox prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Label prefWidth="100.0" text="Date :">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <DatePicker fx:id="tdate">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </DatePicker>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <JFXComboBox fx:id="typecombo" labelFloat="true" prefWidth="300.0" promptText="Type">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXComboBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <JFXTextField fx:id="fromB" labelFloat="true" promptText="From">
+                           <HBox.margin>
+                              <Insets bottom="25.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="toB" labelFloat="true" promptText="To">
+                           <HBox.margin>
+                              <Insets bottom="25.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <JFXTextField fx:id="distanceB" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="280.0" promptText="Distance (km)">
+                     <VBox.margin>
+                        <Insets bottom="25.0" left="11.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="fcostB" labelFloat="true" promptText="Fuel Cost (Rs.)">
+                     <VBox.margin>
+                        <Insets bottom="25.0" left="10.0" right="10.0" top="16.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="oexpB" labelFloat="true" promptText="Other Expenses (Rs.)">
+                     <VBox.margin>
+                        <Insets bottom="25.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="560.0" prefWidth="480.0">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <children>
+                  <HBox prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Label prefWidth="150.0" text="Search turn by date :">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <DatePicker fx:id="searchDate">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </DatePicker>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <JFXButton fx:id="searchB" onAction="#searchTurn" prefWidth="200.0" style="-fx-background-color: #00ACC1; -fx-border-color: #00ACC1;" text="Search">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <Label text="By ID:">
+                           <HBox.margin>
+                              <Insets left="10.0" top="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <JFXTextField fx:id="idS" prefHeight="25.0" prefWidth="65.0">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                        <JFXButton fx:id="goB" layoutX="20.0" layoutY="20.0" onAction="#schID" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: #00ACC1; -fx-border-color: #00ACC1;" text="Go">
+                           <HBox.margin>
+                              <Insets left="15.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <Label text="Total Expences:">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <JFXButton fx:id="showTotalcost" minHeight="-Infinity" minWidth="-Infinity" onAction="#showCost" prefHeight="25.0" prefWidth="184.0" style="-fx-background-color: #00ACC1; -fx-border-color: #00ACC1;" text="Show Transport&amp;MaintainCost">
+                     <VBox.margin>
+                        <Insets left="250.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <Label fx:id="teL" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="4.0" prefWidth="30.0" text="None">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets top="-50.0" />
+                     </padding>
+                  </Label>
+                  <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="229.0" prefWidth="438.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="-8.0" />
+                     </VBox.margin>
+                     <children>
+                        <TableView fx:id="turntable" prefHeight="229.0" prefWidth="440.0">
+                          <columns>
+                            <TableColumn fx:id="columnTurnid" prefWidth="75.0" text="TurnID" />
+                            <TableColumn fx:id="columnDriverid" prefWidth="75.0" text="DriverID" />
+                              <TableColumn fx:id="columnAsstdrvid" prefWidth="91.0" text="AsstDriverID" />
+                              <TableColumn fx:id="columnVehicleid" minWidth="0.0" prefWidth="59.0" text="VehicleID" />
+                              <TableColumn fx:id="columnDate" prefWidth="75.0" text="Date" />
+                              <TableColumn fx:id="columnType" prefWidth="75.0" text="Type" />
+                              <TableColumn fx:id="columnRoute" prefWidth="75.0" text="Route" />
+                              <TableColumn fx:id="columnDistance" prefWidth="75.0" text="Distance" />
+                              <TableColumn fx:id="columnFuelcost" prefWidth="75.0" text="FuelCost" />
+                              <TableColumn fx:id="columnOtherexp" prefWidth="75.0" text="OtherExpences" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="39.0" prefWidth="428.0">
+                     <children>
+                        <JFXButton fx:id="addbtn" onAction="#addTurn" prefWidth="100.0" style="-fx-background-color: #00ACC1; -fx-border-color: #00ACC1;" text="Add">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="updateB" onAction="#updateTurn" prefWidth="100.0" style="-fx-background-color: #00ACC1; -fx-border-color: #00ACC1;" text="Update">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="deleteB" onAction="#deleteTurn" prefWidth="100.0" style="-fx-background-color: #00ACC1; -fx-border-color: #00ACC1;" text="Delete">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="clearB" onAction="#clear" prefWidth="100.0" style="-fx-background-color: #00ACC1; -fx-border-color: #00ACC1;" text="Clear">
+                           <HBox.margin>
+                              <Insets left="5.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="480.0">
+                     <children>
+                        <JFXButton onAction="#generateReport" prefWidth="120.0" style="-fx-background-color: #00ACC1; -fx-border-color: #00ACC1;" text="Generate Report">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets right="5.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

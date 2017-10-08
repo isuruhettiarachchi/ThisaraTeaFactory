@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="thisarateafactory.ui.Sales.ui.main.AccountSettingsController">
+   <children>
+      <Pane layoutX="146.0" layoutY="57.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #546E7A;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="currentUsername" layoutX="86.0" layoutY="106.0" style="-fx-background-color: #546E7A; -fx-border-color: white; -fx-text-fill: white;" />
+            <PasswordField fx:id="currentPassword" layoutX="86.0" layoutY="154.0" style="-fx-text-fill: white; -fx-border-color: white; -fx-background-color: #546E7A;" />
+            <PasswordField fx:id="chngPassword" layoutX="86.0" layoutY="201.0" style="-fx-text-fill: white; -fx-border-color: white; -fx-background-color: #546E7A;" />
+            <PasswordField fx:id="chngPasswordConfirm" layoutX="86.0" layoutY="246.0" style="-fx-text-fill: white; -fx-border-color: white; -fx-background-color: #546E7A;" />
+            <Label layoutX="86.0" layoutY="86.0" text="Username" textFill="WHITE" />
+            <Label layoutX="86.0" layoutY="137.0" text="Current Password" textFill="WHITE" />
+            <Label layoutX="86.0" layoutY="184.0" text="New Password" textFill="WHITE" />
+            <Label layoutX="86.0" layoutY="228.0" text="Confirm Password" textFill="WHITE" />
+            <Separator layoutX="297.0" layoutY="13.0" orientation="VERTICAL" prefHeight="381.0" prefWidth="4.0" />
+            <JFXButton layoutX="123.0" layoutY="294.0" onAction="#changePassword" style="-fx-background-color: #00ACC1; -fx-border-color: #00ACC1;" text="Change Password" textFill="WHITE" />
+            <TextField fx:id="newUsername" layoutX="370.0" layoutY="106.0" style="-fx-background-color: #546E7A; -fx-border-color: white; -fx-text-fill: white;" />
+            <PasswordField fx:id="createPassword" layoutX="370.0" layoutY="153.0" style="-fx-text-fill: white; -fx-border-color: white; -fx-background-color: #546E7A;" />
+            <PasswordField fx:id="createPasswordNew" layoutX="370.0" layoutY="198.0" style="-fx-text-fill: white; -fx-border-color: white; -fx-background-color: #546E7A;" />
+            <Label layoutX="370.0" layoutY="86.0" text="Username" textFill="WHITE" />
+            <Label layoutX="370.0" layoutY="136.0" text="New Password" textFill="WHITE" />
+            <Label layoutX="370.0" layoutY="180.0" text="Confirm Password" textFill="WHITE" />
+            <JFXButton layoutX="423.0" layoutY="294.0" onAction="#createAccount" style="-fx-background-color: #00ACC1; -fx-border-color: #00ACC1;" text="Create Account" textFill="WHITE" />
+            <Label fx:id="warningLabelNew" layoutX="342.0" layoutY="228.0" prefHeight="17.0" prefWidth="214.0" textFill="#c60000" />
+            <Label fx:id="warningLabelChange" layoutX="54.0" layoutY="276.0" prefHeight="17.0" prefWidth="214.0" textFill="#c60000" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

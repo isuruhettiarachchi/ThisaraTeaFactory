@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="1320.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thisarateafactory.ui.Production.Packing.PackingProductController">
+   <children>
+      <Pane layoutX="59.0" layoutY="-28.0" prefHeight="650.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="40.0" prefWidth="1320.0" style="-fx-background-color: #00897B;">
+               <children>
+                  <Label text="Packaging" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutY="40.0" prefHeight="570.0" prefWidth="1320.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="300.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <children>
+                        <JFXTextField fx:id="invTxt" labelFloat="true" prefHeight="25.0" prefWidth="204.0" promptText="Invoice Number">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXButton fx:id="btnInvoice" onAction="#AutoIncrementInvoice" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="New Invoice No" />
+                        <HBox prefHeight="50.0" prefWidth="200.0">
+                           <children>
+                              <Label prefWidth="100.0" text="Date of Packing :">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <JFXTextField fx:id="datePack">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <JFXComboBox fx:id="Qua" labelFloat="true" prefWidth="300.0" promptText="Quality">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXComboBox>
+                        <JFXComboBox fx:id="Grade" labelFloat="true" layoutX="10.0" layoutY="105.0" prefWidth="300.0" promptText="Grade">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXComboBox>
+                        <HBox prefHeight="30.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <children>
+                              <JFXComboBox fx:id="CmbFH" labelFloat="true" prefWidth="300.0" promptText="Full/Half">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXComboBox>
+                           </children>
+                        </HBox>
+                        <JFXTextField fx:id="Type" labelFloat="true" promptText="Type of Packing">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="40.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="TxtchestNo" labelFloat="true" promptText="Chest Number">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="40.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="TxtNoCon" labelFloat="true" promptText="Number of Containers">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="40.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="NoWeight" labelFloat="true" promptText="Net Weight Each">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="40.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="550.0" prefWidth="995.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <children>
+                        <TableView fx:id="TablePacking" prefHeight="415.0" prefWidth="966.0">
+                          <columns>
+                            <TableColumn fx:id="colInvoNo" prefWidth="63.0" text="InvoiceNo" />
+                            <TableColumn fx:id="colGrade" prefWidth="52.0" text="Grade" />
+                              <TableColumn fx:id="colQua" prefWidth="65.0" text="Quality" />
+                              <TableColumn fx:id="colcontainersAmount" prefWidth="112.0" text="Container Amount" />
+                              <TableColumn fx:id="colFH" prefWidth="65.0" text="Full/Half" />
+                              <TableColumn fx:id="colNetw" prefWidth="77.0" text="NetTotalQty" />
+                              <TableColumn fx:id="colnetToEach" prefWidth="93.0" text="NetWeightEach" />
+                              <TableColumn fx:id="totG" prefWidth="108.0" text="TotalGrossWeight" />
+                              <TableColumn fx:id="colContainerNo" prefWidth="63.0" text="Chest No" />
+                              <TableColumn fx:id="colTypePacking" prefWidth="91.0" text="TypeOfPacking" />
+                              <TableColumn fx:id="colDateOfPacked" text="Packing Date" />
+                              <TableColumn fx:id="colSampleAllowed" prefWidth="98.0" text="SampleAllowed" />
+                          </columns>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </TableView>
+                        <HBox prefHeight="40.0" prefWidth="200.0">
+                           <children>
+                              <JFXButton fx:id="btnNetTot" onAction="#CalculateNetTotalQuantity" prefWidth="200.0" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="Net Total Quanitity">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <Label fx:id="netTotQua" prefWidth="100.0" text="QTY">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <JFXTextField fx:id="TxtSample" alignment="TOP_LEFT" labelFloat="true" prefHeight="25.0" prefWidth="815.0" promptText="Sample Allow">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <HBox prefHeight="92.0" prefWidth="988.0">
+                           <children>
+                              <JFXButton fx:id="btntotGross" onAction="#CalculateGrossWeightforEach" prefHeight="59.0" prefWidth="200.0" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="Total Gross Weight For Each">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <Label fx:id="TotGforEach" prefWidth="100.0" text="QTY">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <JFXButton onAction="#generateReport" prefWidth="120.0" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="Generate Report" />
+                              <JFXButton fx:id="Addbtn" onAction="#AddRecord" prefWidth="100.0" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="Add">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="Upbtn" onAction="#UpdateRecord" prefWidth="100.0" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="Update">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="delBtn" onAction="#DeleteRecord" prefWidth="100.0" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="Delete">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="cancelBtn" onAction="#CancelRecord" prefWidth="100.0" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="Cancel">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

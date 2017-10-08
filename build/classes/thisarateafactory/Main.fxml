@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="MainWindow" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #F5F5F5;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thisarateafactory.MainController">
+    <children>
+      <VBox layoutX="113.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="75.0" prefWidth="200.0" style="-fx-background-color: #81C784;">
+               <children>
+                  <Pane prefHeight="75.0" prefWidth="799.0">
+                     <children>
+                        <Label layoutX="32.0" layoutY="29.0" text="Management System" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="66.0" layoutY="11.0" text="Thisara Tea Factory" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="user" contentDisplay="RIGHT" layoutX="635.0" layoutY="18.0" onAction="#changeSettings" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="Username" textAlignment="RIGHT" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/main/management.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+               </children></HBox>
+            <Pane prefHeight="525.0" prefWidth="800.0">
+               <children>
+                  <Pane layoutX="83.0" layoutY="28.0" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #00BCD4;">
+                     <children>
+                        <JFXButton fx:id="employeeButton" layoutX="131.0" layoutY="44.0" onAction="#loadEmployee" style="-fx-background-color: #3F51B5;" text="View All" textFill="WHITE" />
+                        <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="7.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/main/users.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="133.0" layoutY="23.0" text="Employees" textFill="WHITE" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="83.0" layoutY="208.0" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #5C6BC0;">
+                     <children>
+                        <JFXButton fx:id="financeButton" layoutX="131.0" layoutY="44.0" onAction="#loadFinance" style="-fx-background-color: #26C6DA;" text="View All" textFill="WHITE" />
+                        <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="7.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/main/businessman.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="95.0" layoutY="24.0" text="Financial Activites" textFill="WHITE" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="83.0" layoutY="118.0" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #009688;">
+                     <children>
+                        <JFXButton fx:id="assetButton" layoutX="131.0" layoutY="44.0" onAction="#loadAsset" style="-fx-background-color: #03A9F4;" text="Manage" textFill="WHITE" />
+                        <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="7.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/main/exchange.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="156.0" layoutY="24.0" text="Assets" textFill="WHITE" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="308.0" layoutY="28.0" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #3F51B5;">
+                     <children>
+                        <JFXButton fx:id="supplierButton" layoutX="131.0" layoutY="44.0" onAction="#loadSupply" style="-fx-background-color: #26A69A;" text="Manage" textFill="WHITE" />
+                        <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="7.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/main/herbal-spa-treatment-leaves.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="132.0" layoutY="24.0" text="Tea Supply" textFill="WHITE" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="519.0" layoutY="28.0" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #039BE5;">
+                     <children>
+                        <JFXButton fx:id="productionButton" layoutX="131.0" layoutY="44.0" onAction="#loadProduction" style="-fx-background-color: #26A69A;" text="Manage" textFill="WHITE" />
+                        <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="7.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/main/package-for-delivery.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="89.0" layoutY="24.0" text="Production Process" textFill="WHITE" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="308.0" layoutY="118.0" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #512DA8;">
+                     <children>
+                        <JFXButton fx:id="salesButton" layoutX="131.0" layoutY="44.0" onAction="#loadSales" style="-fx-background-color: #26A69A;" text="View All" textFill="WHITE" />
+                        <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="7.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/main/shopping-cart.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="103.0" layoutY="24.0" text="Production Sales" textFill="WHITE" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="519.0" layoutY="118.0" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #00ACC1;">
+                     <children>
+                        <JFXButton fx:id="transportButton" layoutX="131.0" layoutY="44.0" onAction="#loadTransport" style="-fx-background-color: #3F51B5;" text="Manage" textFill="WHITE" />
+                        <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="7.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/main/delivery-truck.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="139.0" layoutY="24.0" text="Transport" textFill="WHITE" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="519.0" layoutY="208.0" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #00897B;">
+                     <children>
+                        <JFXButton fx:id="wastageButton" layoutX="131.0" layoutY="44.0" onAction="#loadWastage" style="-fx-background-color: #7E57C2;" text="Manage" textFill="WHITE" />
+                        <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="7.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/main/recycling-bin-with-wheels.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="144.0" layoutY="24.0" text="Wastage" textFill="WHITE" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>

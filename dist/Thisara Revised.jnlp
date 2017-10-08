@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Thisara Revised.jnlp">
+  <information>
+    <title>Thisara Revised</title>
+    <vendor>Isuru Hettiarachchi</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\com-jaspersoft-ireport-components.jar" size="1910683" download="eager" />
+    <jar href="lib\com-jaspersoft-ireport-jasperserver.jar" size="1459823" download="eager" />
+    <jar href="lib\com-jaspersoft-ireport.jar" size="11859495" download="eager" />
+    <jar href="lib\com-jaspersoft-jrx.jar" size="84379" download="eager" />
+    <jar href="lib\commons-beanutils-1.8.3.jar" size="232019" download="eager" />
+    <jar href="lib\commons-collections-3.2.2.jar" size="588337" download="eager" />
+    <jar href="lib\commons-digester-2.1.jar" size="196768" download="eager" />
+    <jar href="lib\commons-logging-1.2-javadoc.jar" size="158448" download="eager" />
+    <jar href="lib\commons-logging-1.2.jar" size="61829" download="eager" />
+    <jar href="lib\groovy-2.4.5.jar" size="4553023" download="eager" />
+    <jar href="lib\jasperreports-5.6.0.jar" size="4989676" download="eager" />
+    <jar href="lib\jasperreports-chart-themes-5.6.0.jar" size="164416" download="eager" />
+    <jar href="lib\jasperreports-core-renderer.jar" size="1079323" download="eager" />
+    <jar href="lib\jasperreports-extensions-3.5.3.jar" size="35621" download="eager" />
+    <jar href="lib\jasperreports-fonts-5.6.0.jar" size="2478093" download="eager" />
+    <jar href="lib\jasperreports-functions-5.6.0.jar" size="31980" download="eager" />
+    <jar href="lib\jasperreports-htmlcomponent-4.7.1.jar" size="48683" download="eager" />
+    <jar href="lib\jasperreports-htmlcomponent-5.0.1.jar" size="48823" download="eager" />
+    <jar href="lib\jasperreports-json.jar" size="16696" download="eager" />
+    <jar href="lib\jasperreports-jtidy-r938.jar" size="188121" download="eager" />
+    <jar href="lib\jcalendar-1.4.jar" size="165052" download="eager" />
+    <jar href="lib\jcommon-1.0.12.jar" size="309245" download="eager" />
+    <jar href="lib\jcommon-1.0.8-junit.jar" size="240174" download="eager" />
+    <jar href="lib\jcommon-1.0.8.jar" size="310890" download="eager" />
+    <jar href="lib\jcommon-xml-1.0.8.jar" size="184907" download="eager" />
+    <jar href="lib\jfoenix.jar" size="2350676" download="eager" />
+    <jar href="lib\jfreechart-1.0.12.jar" size="1368681" download="eager" />
+    <jar href="lib\jfreechart-1.0.6.jar" size="1212442" download="eager" />
+    <jar href="lib\jfreechart-1.0.9.jar" size="1291498" download="eager" />
+    <jar href="lib\joda-time-2.1.jar" size="570478" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.41-bin.jar" size="992808" download="eager" />
+    <jar href="lib\mysql-connector-java-6.0.5.jar" size="1891236" download="eager" />
+    <jar href="lib\rs2xml.jar" size="171578" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Thisara Revised" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="thisarateafactory.ThisaraTeaFactory"  name="Thisara Revised" />
+  <update check="always"/>
+</jnlp>

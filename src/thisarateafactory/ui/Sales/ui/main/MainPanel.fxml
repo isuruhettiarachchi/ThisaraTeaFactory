@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="salesMainPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #B2EBF2;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thisarateafactory.ui.Sales.ui.main.MainPanelController">
+   <children>
+      <Pane layoutX="140.0" layoutY="200.0" prefHeight="50" prefWidth="600" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="202.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../img/main/shopping-cart.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnSalesSummary" contentDisplay="TOP" layoutX="120.0" layoutY="120.0" onAction="#salesSummaryButtonPressed" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #00ACC1; -fx-border-color: #00ACC1;" stylesheets="@style.css" text="Sales Summary">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../img/sales/pie-chart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnReturnSales" contentDisplay="TOP" layoutX="306.0" layoutY="120.0" onAction="#returnSalesButtonPressed" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #00ACC1; -fx-border-color: #00ACC1;" stylesheets="@style.css" text="Return Sales">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../img/sales/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnDeductions" contentDisplay="TOP" layoutX="120.0" layoutY="206.0" onAction="#DeductionsButtonPressed" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #00ACC1; -fx-border-color: #00ACC1;" stylesheets="@style.css" text="Deductions">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../img/sales/shopping-cart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnFinalizing" contentDisplay="TOP" layoutX="306.0" layoutY="206.0" onAction="#finalizingButtonPressed" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #00ACC1; -fx-border-color: #00ACC1;" stylesheets="@style.css" text="Finalizing">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../img/sales/cart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Label layoutX="274.0" layoutY="86.0" text="Production Sales" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

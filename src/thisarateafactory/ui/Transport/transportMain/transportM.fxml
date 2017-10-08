@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="transportMainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thisarateafactory.ui.Transport.transportMain.transportContraller">
+   <children>
+      <Pane layoutX="90.0" layoutY="171.0" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #C5CAE9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="208.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/main/delivery-truck.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="drvB" contentDisplay="TOP" layoutX="120.0" layoutY="120.0" onAction="#openDriver" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #3F51B5; -fx-border-color: #3F51B5;" text="Driver Details" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../img/transport/driver.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="vhB" contentDisplay="TOP" layoutX="306.0" layoutY="120.0" onAction="#openVehicle" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #3F51B5; -fx-border-color: #3F51B5;" text="Vehicle Details" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../img/transport/truck.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="turnB" contentDisplay="TOP" layoutX="120.0" layoutY="206.0" onAction="#openTurn" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #3F51B5; -fx-border-color: #3F51B5;" text="Turn Details" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../img/transport/turn.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="maintainB" contentDisplay="TOP" layoutX="306.0" layoutY="206.0" onAction="#openMaintain" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #3F51B5; -fx-border-color: #3F51B5;" text="Maintain Details" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../img/transport/spanner.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Label layoutX="288.0" layoutY="85.0" text="Tea Supply" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

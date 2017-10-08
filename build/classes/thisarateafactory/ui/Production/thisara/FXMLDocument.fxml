@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thisarateafactory.ui.Production.thisara.FXMLDocumentController">
+   <children>
+      <Pane layoutX="81.0" layoutY="52.0" prefHeight="650.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="40.0" prefWidth="1200.0" style="-fx-background-color: #00897B;">
+               <children>
+                  <Label text="Daily Production" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutY="40.0" prefHeight="570.0" prefWidth="1200.0">
+               <children>
+                  <VBox prefHeight="550.0" prefWidth="223.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <children>
+                        <JFXTextField fx:id="pidText" labelFloat="true" promptText="Product ID">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <HBox prefHeight="45.0" prefWidth="225.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <JFXTextField fx:id="startDate" labelFloat="true" prefHeight="25.0" prefWidth="197.0" promptText="Start Date">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="70.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="82.0" prefWidth="131.0">
+                                 <children>
+                                    <JFXButton onAction="#GetSuppliedWeight" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="Supplied Weight" textFill="#4d4d4d">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </JFXButton>
+                                    <Label alignment="CENTER" prefWidth="100.0">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="74.0" prefWidth="77.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefWidth="100.0" text="Todate">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <JFXTextField fx:id="txtSupWht" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <JFXTextField fx:id="dh1Text" labelFloat="true" promptText="Dhool #1">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="dh2Text" labelFloat="true" promptText="Dhool #2">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="30.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="dh3Text" labelFloat="true" promptText="Dhool #3">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="30.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="dh4Text" labelFloat="true" promptText="Dhool #4">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="30.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXButton fx:id="TotFirdbtn" onAction="#CalculateTotalFiredTea" prefHeight="25.0" prefWidth="223.0" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="Total Fired Tea">
+                           <VBox.margin>
+                              <Insets top="25.0" />
+                           </VBox.margin></JFXButton>
+                        <JFXTextField fx:id="firedTeaText" labelFloat="true" promptText="Fired Tea">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="25.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="550.0" prefWidth="210.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <children>
+                        <JFXButton fx:id="btnNewP" onAction="#ProductAutoIncrement" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="New Product ">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <HBox prefHeight="167.0" prefWidth="78.0">
+                           <children>
+                              <VBox prefHeight="167.0" prefWidth="145.0">
+                                 <children>
+                                    <JFXButton fx:id="calcRefusedTeaButton" onAction="#CalculateRefucedTea" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="Refused Tea">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="10.0" right="10.0" top="50.0" />
+                                       </VBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="calcMadeTeaButton" onAction="#CalculateMadeTea" prefWidth="100.0" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="Made Tea">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="calcOutTurnButton" onAction="#CalculateOutTurn" prefWidth="100.0" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="Out Turn">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </JFXButton>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="167.0" prefWidth="122.0">
+                                 <children>
+                                    <Label text="Today" textFill="#4d4d4d">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="15.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <JFXTextField fx:id="txtRefuceWhtToday" prefHeight="25.0" prefWidth="57.0">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txtMadeWhtToday">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txtOutTurnToday">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </JFXTextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="5.0" top="295.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="550.0" prefWidth="757.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <children>
+                        <TableView fx:id="TableDailyProduction" prefHeight="311.0" prefWidth="764.0">
+                          <columns>
+                            <TableColumn fx:id="ColPID" prefWidth="63.0" text="ProductID" />
+                            <TableColumn fx:id="Date" prefWidth="88.0" text="Date" />
+                              <TableColumn fx:id="ColGWeight" prefWidth="124.0" text="Green Leaves Weight" />
+                              <TableColumn fx:id="MWeight" prefWidth="65.0" text="Made Tea" />
+                              <TableColumn fx:id="OutTurn" prefWidth="53.0" text="Out turn" />
+                              <TableColumn fx:id="FiredTea" prefWidth="62.0" text="Fired Tea" />
+                              <TableColumn fx:id="colRefusedTea" prefWidth="75.0" text="Refuced Tea" />
+                              <TableColumn fx:id="colDh1" prefWidth="46.0" text="Dhool1" />
+                              <TableColumn fx:id="colDh2" minWidth="7.0" prefWidth="46.0" text="Dhool2" />
+                              <TableColumn fx:id="colDh3" minWidth="0.0" prefWidth="47.0" text="Dhool3" />
+                              <TableColumn fx:id="colDh" minWidth="7.0" prefWidth="47.0" text="Dhool4" />
+                          </columns>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </TableView>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <JFXButton onAction="#generateReport" prefWidth="120.0" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="Generate Report" />
+                              <JFXButton fx:id="addButton" onAction="#addDailyProduct" prefWidth="100.0" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="Add">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="updateBtn" onAction="#updateDalyProduct" prefWidth="100.0" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="Update">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="deleteButton" onAction="#deleteDailyRecord" prefWidth="100.0" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="Delete">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="cancelButton" onAction="#cancelDailyRecord" prefWidth="100.0" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="Cancel">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

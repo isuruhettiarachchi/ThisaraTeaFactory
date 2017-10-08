@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="supplierMainPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #B2DFDB;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thisarateafactory.ui.Supplier.SupplierLoaderController">
+   <children>
+      <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="197.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/main/herbal-spa-treatment-leaves.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="supplierButton" contentDisplay="TOP" layoutX="140.0" layoutY="120.0" onAction="#loadSuppliers" prefHeight="75.0" prefWidth="155.0" style="-fx-background-color: #009688; -fx-border-color: #009688;" text="Suppliers" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/supply/users-group.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton fx:id="teaCardButton" contentDisplay="TOP" layoutX="305.0" layoutY="120.0" onAction="#loadTeaCard" prefHeight="75.0" prefWidth="155.0" style="-fx-background-color: #009688; -fx-border-color: #009688;" text="Tea Card" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/supply/padnote.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton fx:id="paymentButton" contentDisplay="TOP" layoutX="140.0" layoutY="206.0" onAction="#loadPayment" prefHeight="75.0" prefWidth="155.0" style="-fx-background-color: #009688; -fx-border-color: #009688;" text="Payment" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/supply/payment-method.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton fx:id="monthlyButton" contentDisplay="TOP" layoutX="305.0" layoutY="206.0" onAction="#loadMonthly" prefHeight="75.0" prefWidth="155.0" style="-fx-background-color: #009688; -fx-border-color: #009688;" text="Monthly Bulk" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/supply/stack-of-square-papers.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <Label layoutX="270.0" layoutY="85.0" text="Tea Supply" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

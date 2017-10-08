@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="45f12374-264b-476f-bc77-44b93bbbe217">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="580"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[SELECT
+     supplier.`SupplierID` AS SupplierID,
+     supplier.`Name` AS Name,
+     supplier.`Address` AS Address,
+     supplier.`LandName` AS LandName,
+     supplier.`GramaNiladhariDivision` AS GramaNiladhariDivision,
+     supplier.`LandArea` AS LandArea,
+     supplier.`NIC` AS NIC,
+     supplier.`TelephoneNo` AS TelephoneNo
+FROM
+     `supplier` supplier]]>
+	</queryString>
+	<field name="SupplierID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Address" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LandName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="GramaNiladhariDivision" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LandArea" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NIC" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TelephoneNo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="245" y="0" width="308" height="62" uuid="68e60358-347f-4a82-8780-0c9c0aec3f91"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Tea Suppliers]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="276" y="62" width="250" height="22" uuid="47c87876-521f-4188-90be-03e2c0e40500"/>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Detail Summary of Tea Suppliers]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="cf1977b6-6a9b-4ba8-85b6-142e1cc6d534"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="1" y="0" width="51" height="20" uuid="902d7568-6af1-48d6-ade5-876a4a99afee"/>
+				<text><![CDATA[SupplierID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="64" y="0" width="98" height="20" uuid="e0534741-d0e9-4c48-ba46-9e2e14487eab"/>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="176" y="0" width="128" height="20" uuid="dd367688-0426-41c5-9093-2c2d6ab8dfaa"/>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="0" width="68" height="20" uuid="a735a892-cdd3-461b-92e9-a2b00da7f992"/>
+				<text><![CDATA[LandName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="0" width="86" height="20" uuid="3ccb7bb7-0bd9-4b01-9a30-eb744eabb315"/>
+				<text><![CDATA[GramaNiladhariDiv]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="509" y="0" width="44" height="20" uuid="a024f88a-b8ab-4a6a-a724-0d3a0d69db07"/>
+				<text><![CDATA[LandArea]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="569" y="0" width="78" height="20" uuid="908ff579-3347-4eb9-954b-daa96d4f0f12"/>
+				<text><![CDATA[NIC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="662" y="0" width="84" height="20" uuid="3d35d546-2b0c-47e6-adca-418e2087fb55"/>
+				<text><![CDATA[TelephoneNo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="ed7e82c0-f1a8-4951-9335-aaa2d42daf08"/>
+			</frame>
+			<textField>
+				<reportElement x="1" y="0" width="51" height="20" uuid="42d6d499-2251-4400-9918-cc1c925aa857"/>
+				<textFieldExpression><![CDATA[$F{SupplierID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="64" y="0" width="98" height="20" uuid="0f8663f9-2ef4-4486-82c9-7914143bc280"/>
+				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="176" y="0" width="128" height="20" uuid="d8747157-4cc7-4cfe-92b5-5c40263343e8"/>
+				<textFieldExpression><![CDATA[$F{Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="68" height="20" uuid="9d97dfe6-b4b3-417f-bc12-525aad17b71b"/>
+				<textFieldExpression><![CDATA[$F{LandName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="404" y="0" width="86" height="20" uuid="7ddfd021-f7f2-474b-824e-b3e7a3e149e9"/>
+				<textFieldExpression><![CDATA[$F{GramaNiladhariDivision}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="509" y="0" width="44" height="20" uuid="42ae028f-ecab-4482-bb5b-f686b763bc60"/>
+				<textFieldExpression><![CDATA[$F{LandArea}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="569" y="0" width="78" height="20" uuid="846f8124-814c-4913-b3a9-cd67586c3cb0"/>
+				<textFieldExpression><![CDATA[$F{NIC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="662" y="0" width="84" height="20" uuid="15090359-37dc-48b3-99da-e23654476cf1"/>
+				<textFieldExpression><![CDATA[$F{TelephoneNo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="7a22d594-52a0-40b3-a527-d36c95137dfe"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="fa275eea-8053-4b88-890f-444b3e38b45b"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="9cd18536-ee95-4393-9ef4-a0e64126337b"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="adeb6649-7c42-46f8-91d7-6729df2778e0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="465a542d-3c7e-4fe9-9f12-4d0ff6acf1a4"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

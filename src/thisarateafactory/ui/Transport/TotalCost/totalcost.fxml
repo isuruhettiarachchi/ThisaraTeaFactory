@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thisarateafactory.ui.Transport.TotalCost.TotalcostController">
+   <children>
+      <TableView fx:id="totaltransportTable" layoutX="42.0" layoutY="70.0" prefHeight="200.0" prefWidth="530.0">
+        <columns>
+          <TableColumn fx:id="columnYear" prefWidth="97.0" text="Year" />
+          <TableColumn fx:id="columnMonth" prefWidth="89.0" text="Month" />
+            <TableColumn fx:id="columnFcost" prefWidth="109.0" text="Fuel Cost" />
+            <TableColumn fx:id="columnOe" prefWidth="115.0" text="Other Expenses" />
+            <TableColumn fx:id="columnTotal" minWidth="3.0" prefWidth="119.0" text="Total" />
+        </columns>
+      </TableView>
+      <Label layoutX="42.0" layoutY="31.0" text="Total Transport Cost" />
+      <Label layoutX="42.0" layoutY="296.0" text="Total Maintanance Cost" />
+      <TableView fx:id="mcostTable" layoutX="42.0" layoutY="334.0" prefHeight="200.0" prefWidth="530.0">
+        <columns>
+          <TableColumn fx:id="columnYearM" prefWidth="189.0" text="Year" />
+          <TableColumn fx:id="columnMonthM" prefWidth="147.0" text="Month" />
+            <TableColumn fx:id="columnMcost" prefWidth="193.0" text="Maintenance Cost" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

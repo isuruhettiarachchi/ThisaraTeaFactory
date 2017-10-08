@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="57e2aba1-4b9c-4819-8713-904824fe2192">
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[SELECT
+     dailyproduct.`ProductID` AS ProductID,
+     dailyproduct.`Date` AS Date,
+     dailyproduct.`GreenLeavesWeight` AS GreenLeaves,
+     dailyproduct.`MadeTeaWeight` AS MadeTea,
+     dailyproduct.`OutTurn` AS OutTurn,
+     dailyproduct.`FiredTea` AS FiredTea,
+     dailyproduct.`RefusedTea` AS RefusedTea,
+     dailyproduct.`Dhool1` AS Dhool1,
+     dailyproduct.`Dhool2` AS Dhool2,
+     dailyproduct.`Dhool3` AS Dhool3,
+     dailyproduct.`Dhool4` AS Dhool4
+FROM
+     `dailyproduct` dailyproduct]]>
+	</queryString>
+	<field name="ProductID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="GreenLeaves" class="java.lang.Double"/>
+	<field name="MadeTea" class="java.lang.Double"/>
+	<field name="OutTurn" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FiredTea" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="RefusedTea" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Dhool1" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Dhool2" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Dhool3" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Dhool4" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="165" y="0" width="470" height="62" uuid="c3e05b9a-ece0-432c-86d2-d24bdb3e8ce8"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Daily Tea Production]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="218" y="62" width="297" height="22" uuid="2919f0f1-df10-42aa-83dc-fe35be76dc82"/>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Summary of Daily Made Tea Production]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="4cb3c50b-801d-4337-bf89-fa20bbb65699"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="1" y="0" width="46" height="20" uuid="42aed2cf-870b-45a8-81ac-ab300bc46830"/>
+				<text><![CDATA[ProductID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="49" y="0" width="74" height="20" uuid="0607f8f9-2f33-48bd-aa7d-46b90ab862a0"/>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="0" width="61" height="20" uuid="a08e8e5f-0185-473c-ab84-c6b6ddbad479"/>
+				<text><![CDATA[GreenLeaves]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="0" width="48" height="20" uuid="407d0d08-ca3c-4136-8232-4a866355fee7"/>
+				<text><![CDATA[MadeTea]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="0" width="53" height="20" uuid="980b0071-aba4-45db-b7df-519311172d2e"/>
+				<text><![CDATA[OutTurn]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="296" y="0" width="56" height="20" uuid="c1075fdd-220a-4cf6-8d60-1c5fa8d394fc"/>
+				<text><![CDATA[FiredTea]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="0" width="64" height="20" uuid="f1835356-dcff-4221-a1c0-56b128cb4195"/>
+				<text><![CDATA[RefusedTea]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="423" y="0" width="56" height="20" uuid="d2e857a0-2a17-4ed9-8b7b-e39d0ea436be"/>
+				<text><![CDATA[Dhool1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="485" y="0" width="56" height="20" uuid="f794db47-fba1-4b0f-8640-e229090e7f7a"/>
+				<text><![CDATA[Dhool2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="548" y="0" width="52" height="20" uuid="513a27a4-03d4-4083-ad52-bcd7123b5c00"/>
+				<text><![CDATA[Dhool3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="605" y="0" width="61" height="20" uuid="3e34bf6c-a1c2-464b-bdb7-8147e3fa644e"/>
+				<text><![CDATA[Dhool4]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="fdcce6bd-45c4-477b-a3da-578c77096583"/>
+			</frame>
+			<textField>
+				<reportElement x="1" y="0" width="46" height="20" uuid="c19f0c6f-4952-4634-893d-0450f964e0ea"/>
+				<textFieldExpression><![CDATA[$F{ProductID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="49" y="0" width="74" height="20" uuid="bd18b2e1-5652-4fec-9351-c826b37be125"/>
+				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="125" y="0" width="61" height="20" uuid="e364e587-417e-4749-a0a0-1fefd49dd6a6"/>
+				<textFieldExpression><![CDATA[$F{GreenLeaves}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="189" y="0" width="48" height="20" uuid="1f8921d1-93ae-40a6-a726-10205c797438"/>
+				<textFieldExpression><![CDATA[$F{MadeTea}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="0" width="53" height="20" uuid="38e478ab-5553-455b-b6be-2c178584aefa"/>
+				<textFieldExpression><![CDATA[$F{OutTurn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="296" y="0" width="56" height="20" uuid="15db8da0-6902-4bad-aa05-04d01f861cd5"/>
+				<textFieldExpression><![CDATA[$F{FiredTea}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="0" width="64" height="20" uuid="8466d003-70a0-4eff-b5e4-6e722ab52731"/>
+				<textFieldExpression><![CDATA[$F{RefusedTea}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="423" y="0" width="56" height="20" uuid="c069331c-93bb-4a5e-87a8-ba82df827867"/>
+				<textFieldExpression><![CDATA[$F{Dhool1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="485" y="0" width="56" height="20" uuid="20829a17-12f9-49d0-b9da-cd52a989b5e7"/>
+				<textFieldExpression><![CDATA[$F{Dhool2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="548" y="0" width="52" height="20" uuid="029cbdee-8f20-4bd1-b350-ff252746dd85"/>
+				<textFieldExpression><![CDATA[$F{Dhool3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="605" y="0" width="61" height="20" uuid="f6dd7a21-d915-4562-b6bc-cb9ce864025f"/>
+				<textFieldExpression><![CDATA[$F{Dhool4}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="4b4de473-e74b-45a8-be47-4d326df20706"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="21c84b84-81cf-4960-b8d9-46bbe6e81277"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="37396cab-3d99-491f-881b-3dd62c2a0e88"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="790a6545-9543-4e0f-87f6-ca57778ed353"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="6439fe67-1030-4ffe-9e7f-bed0c5cb9756"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

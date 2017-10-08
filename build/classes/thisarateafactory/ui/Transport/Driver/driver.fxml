@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="611.0" prefWidth="908.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thisarateafactory.ui.Transport.Driver.DriverController">
+   <children>
+      <HBox layoutY="6.0" prefHeight="501.0" prefWidth="902.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="500.0" prefWidth="300.0">
+               <children>
+                  <HBox prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="62.0" text="Driver ID :">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="driveridL" prefHeight="17.0" prefWidth="46.0">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="-50.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <JFXTextField fx:id="drnameB" labelFloat="true" promptText="Name">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextArea fx:id="drvaddrB" labelFloat="true" prefHeight="100.0" promptText="Address">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="18.0" />
+                     </VBox.margin>
+                  </JFXTextArea>
+                  <Label fx:id="error_addr">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <HBox prefHeight="40.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label prefWidth="50.0" text="Status :">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <RadioButton fx:id="mainR" mnemonicParsing="false" onAction="#main" text="Main">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="status" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="asstR" mnemonicParsing="false" onAction="#asst" text="Assistant" toggleGroup="$status">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+                  <JFXTextField fx:id="licensenumB" labelFloat="true" promptText="License Number">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <Label fx:id="error_license" layoutX="10.0" layoutY="447.0">
+                     <padding>
+                        <Insets left="12.0" />
+                     </padding>
+                  </Label>
+                  <JFXTextField fx:id="nicB" labelFloat="true" promptText="NIC ">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <Label fx:id="error_nic" layoutX="10.0" layoutY="492.0">
+                     <padding>
+                        <Insets left="12.0" />
+                     </padding>
+                  </Label>
+                  <JFXTextField fx:id="mobileB" labelFloat="true" promptText="Mobile">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <Label fx:id="error_mobile" layoutX="10.0" layoutY="280.0">
+                     <padding>
+                        <Insets left="12.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="591.0" prefWidth="549.0">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <children>
+                  <TableView fx:id="tview" prefHeight="455.0" prefWidth="570.0">
+                     <columns>
+                        <TableColumn fx:id="didcol" prefWidth="75.0" text="D_ID" />
+                        <TableColumn fx:id="dnamecol" prefWidth="75.0" text="D_Name" />
+                        <TableColumn fx:id="daddrcol" prefWidth="75.0" text="D_Addr" />
+                        <TableColumn fx:id="dstatuscol" prefWidth="75.0" text="Status" />
+                        <TableColumn fx:id="dlnocol" prefWidth="75.0" text="LicenseNo" />
+                        <TableColumn fx:id="niccol" prefWidth="75.0" text="NIC" />
+                        <TableColumn fx:id="mobcol" prefWidth="75.0" text="Mobile" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <HBox prefHeight="71.0" prefWidth="544.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="138.0" text="Search by Driver Name:">
+                           <HBox.margin>
+                              <Insets left="15.0" top="13.0" />
+                           </HBox.margin>
+                        </Label>
+                        <JFXTextField fx:id="schT" prefHeight="25.0" prefWidth="151.0" promptText="Search">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                        <JFXButton fx:id="goB" onAction="#schName" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: #00ACC1; -fx-border-color: #00ACC1;" text="Go">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="103.0" prefWidth="524.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                     </VBox.margin>
+                     <children>
+                        <JFXButton fx:id="addB" onAction="#addDriver" prefWidth="100.0" style="-fx-background-color: #00ACC1; -fx-border-color: #00ACC1;" text="Add">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="updateB" onAction="#updateDriver" prefWidth="100.0" style="-fx-background-color: #00ACC1; -fx-border-color: #00ACC1;" text="Update">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="deleteB" onAction="#deleteDriver" prefWidth="100.0" style="-fx-background-color: #00ACC1; -fx-border-color: #00ACC1;" text="Delete">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="clearB" layoutX="184.0" layoutY="83.0" onAction="#clear" prefWidth="100.0" style="-fx-background-color: #00ACC1; -fx-border-color: #00ACC1;" text="Clear">
+                           <HBox.margin>
+                              <Insets left="10.0" right="20.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

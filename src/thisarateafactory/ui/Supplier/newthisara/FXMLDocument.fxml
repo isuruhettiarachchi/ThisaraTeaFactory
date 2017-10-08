@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thisarateafactory.ui.Supplier.newthisara.FXMLDocumentController">
+   <children>
+      <Pane layoutX="191.0" layoutY="80.0" prefHeight="650.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="40.0" prefWidth="1200.0" style="-fx-background-color: #00796B;">
+               <children>
+                  <Label text="Thisara Supply" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutY="30.0" prefHeight="570.0" prefWidth="1200.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="300.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <children>
+                        <HBox prefHeight="36.0" prefWidth="280.0">
+                           <children>
+                              <Label prefHeight="36.0" prefWidth="85.0" text="Supplier ID" textFill="#bfb8b8" />
+                              <JFXTextField fx:id="suppid" alignment="CENTER" disable="true" prefHeight="31.0" prefWidth="196.0" text="Supplier ID" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <JFXTextField fx:id="supname" labelFloat="true" layoutX="10.0" layoutY="10.0" promptText="Name">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="supnic" labelFloat="true" layoutX="10.0" layoutY="35.0" promptText="NIC">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextArea fx:id="supadd" labelFloat="true" prefHeight="100.0" promptText="Address">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextArea>
+                        <JFXTextField fx:id="supphone" labelFloat="true" layoutX="10.0" layoutY="60.0" promptText="Contact Number">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="supgnd" labelFloat="true" layoutX="10.0" layoutY="247.0" promptText="Grama Niladhari Division">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="suplname" labelFloat="true" layoutX="10.0" layoutY="272.0" promptText="Land Name">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="suplarea" labelFloat="true" layoutX="20.0" layoutY="365.0" promptText="Land Area">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="480.0" prefWidth="700.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <children>
+                        <TableView fx:id="TableSupplier" prefHeight="425.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn fx:id="SupplierIDcol" prefWidth="49.0" text="ID" />
+                            <TableColumn fx:id="Namecol" prefWidth="102.0" text="Name" />
+                              <TableColumn fx:id="Addresscol" prefWidth="124.0" text="Address" />
+                              <TableColumn fx:id="LandNamecol" text="LandName" />
+                              <TableColumn fx:id="GramaNiladhariDivisioncol" prefWidth="83.0" text="GN Divition" />
+                              <TableColumn fx:id="LandAreacol" prefWidth="60.0" text="LandArea" />
+                              <TableColumn fx:id="NICcol" prefWidth="92.0" text="NIC" />
+                              <TableColumn fx:id="TelephoneNocol" prefWidth="89.0" text="Phone" />
+                          </columns>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </TableView>
+                        <HBox alignment="CENTER_RIGHT">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <children>
+                              <JFXButton onAction="#generateReport" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="Generate Report">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="snew" onAction="#NewRecord" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="New">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="addButton" onAction="#AddRecords" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="Add">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="update" layoutX="10.0" layoutY="10.0" onAction="#UpdateRecords" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="Update">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="delete" layoutX="62.0" layoutY="10.0" onAction="#DeleteRecords" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="Delete">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="clear" layoutX="114.0" layoutY="10.0" onAction="#Clear" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="Cancel">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

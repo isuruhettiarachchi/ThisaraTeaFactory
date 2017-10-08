@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thisarateafactory.ui.Sales.ui.finalizing.FinalizingController">
+   <children>
+      <Pane layoutX="140.0" layoutY="136.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #00796B;">
+               <children>
+                  <Label text="Finalizing Sales" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutY="50.0" prefHeight="550.0" prefWidth="800.0">
+               <children>
+                  <VBox fx:id="txtDate" prefHeight="200.0" prefWidth="300.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <children>
+                        <JFXTextField fx:id="txtLotNumber" labelFloat="true" promptText="Lot Number">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtInvoiceNumber" labelFloat="true" promptText="Invoice Number">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <HBox prefHeight="50.0" prefWidth="200.0">
+                           <children>
+                              <Label prefWidth="120.0" text="Finalization Date :">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <DatePicker fx:id="dateFinalization" prefWidth="170.0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </DatePicker>
+                           </children>
+                        </HBox>
+                        <JFXTextField fx:id="txtTotalGrossProceed" labelFloat="true" promptText="Total Gross Proceed">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXComboBox fx:id="cmbMonth" labelFloat="true" prefWidth="300.0" promptText="Month">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXComboBox>
+                        <JFXTextField fx:id="txtDeduction" labelFloat="true" promptText="Total Deduction">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtNetProceed" labelFloat="true" promptText="Total Net Proceed">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtDate1" labelFloat="true" promptText="Date">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXButton fx:id="btnCalculate" onAction="#calculateButtonPressed" prefWidth="300.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="Calculate Net Proceed">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btnDisplayTotalGrossProceed" onAction="#onTotalGrossProceedPressed" prefWidth="300.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="Display Total Gross Proceed">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btnDisplayTotalDeduction" onAction="#onTotalDeductionButtonPressed" prefWidth="300.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="Display Total Deduction">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="500.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <children>
+                        <TableView fx:id="tblFinalizing" prefHeight="380.0" prefWidth="480.0">
+                          <columns>
+                            <TableColumn fx:id="clmDate" prefWidth="75.0" text="Date" />
+                            <TableColumn fx:id="clmTotalNetProceed" prefWidth="75.0" text="Net Proceed" />
+                            <TableColumn fx:id="clmTotalDeduction" prefWidth="75.0" text="Deduction" />
+                            <TableColumn fx:id="clmTotalGrossProceed" prefWidth="85.0" text="Gross Proceed" />
+                            <TableColumn fx:id="clmMonth" prefWidth="65.0" text="Month" />
+                            <TableColumn fx:id="clmLotNo" prefWidth="75.0" text="LotNo" />
+                          </columns>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </TableView>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <JFXButton onAction="#generateReport" prefWidth="100.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="Report" />
+                              <JFXButton fx:id="btnAdd" onAction="#addButtonPressed" prefWidth="100.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="Add">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="btnDelete" onAction="#deleteButtonPressed" prefWidth="100.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="Delete">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="btnClear" onAction="#clearButtonPressed" prefWidth="100.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="Clear">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="68241a02-fc71-45e8-a9ed-3c5c14d4fa1a">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="580"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[SELECT
+     payment.`PaymentID` AS PaymentID,
+     payment.`Date` AS Date,
+     payment.`Description` AS Description,
+     payment.`Amount` AS Amount,
+     payment.`BillNo` AS BillNo,
+     payment.`EBillNo` AS EBillNo,
+     payment.`AccountNo` AS AccountNo,
+     payment.`FVoucherNo` AS FVoucherNo,
+     payment.`OVoucherNo` AS OVoucherNo
+FROM
+     `payment` payment]]>
+	</queryString>
+	<field name="PaymentID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Description" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Amount" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="BillNo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EBillNo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="AccountNo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FVoucherNo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OVoucherNo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="243" y="0" width="346" height="62" uuid="1f16cb34-0f69-46b8-8364-280df224bb35"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Asset Payments]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="303" y="62" width="196" height="22" uuid="049c4dfe-8841-42cd-a7b0-17d60ec0a960"/>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Summary of all Payments]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="94" width="383" height="42" uuid="41bcdd15-1ce4-4c72-9544-0322171199d3"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="fb545c28-a488-40bc-8160-dfd3c64cfeda"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="1" y="0" width="56" height="20" uuid="9c99227d-b262-48b3-8cba-575aa9cd2f24"/>
+				<text><![CDATA[PaymentID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="68" y="0" width="68" height="20" uuid="8eb0e60d-0939-4340-842f-7b3302cc4170"/>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="143" y="0" width="100" height="20" uuid="a1d87400-0b9e-4bfd-b75f-c8b01fb9b8c0"/>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="255" y="0" width="69" height="20" uuid="7540400d-1015-4b47-8ed5-dbbe85010f2e"/>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="341" y="0" width="58" height="20" uuid="3f19c267-437c-49eb-add4-c6e0516d0ad2"/>
+				<text><![CDATA[BillNo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="0" width="76" height="20" uuid="b1d932b2-9999-4e13-985a-e87c0cb58a02"/>
+				<text><![CDATA[EBillNo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="506" y="0" width="83" height="20" uuid="3ff854c8-0a2c-46a9-ad32-ee2b8c5a0fc0"/>
+				<text><![CDATA[AccountNo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="601" y="0" width="81" height="20" uuid="119833dd-8189-4d96-a71d-f11eb2c49924"/>
+				<text><![CDATA[FVoucherNo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="692" y="0" width="89" height="20" uuid="1436b3a6-1337-4d27-91ae-c25a61770a81"/>
+				<text><![CDATA[OVoucherNo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="53ad1091-58db-43da-ab37-49f057ea8cd1"/>
+			</frame>
+			<textField>
+				<reportElement x="1" y="0" width="56" height="20" uuid="bba73363-f3fe-4cb9-b4e9-8b1f36d60ae7"/>
+				<textFieldExpression><![CDATA[$F{PaymentID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="68" y="0" width="68" height="20" uuid="985e04d7-22df-4f7c-9a37-530dad2e6f7b"/>
+				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="0" width="100" height="20" uuid="d6a63ef0-4443-4ed2-bd7e-c38e5439365e"/>
+				<textFieldExpression><![CDATA[$F{Description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="255" y="0" width="69" height="20" uuid="70031a77-ab79-43d4-9411-9abd5fc45667"/>
+				<textFieldExpression><![CDATA[$F{Amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="341" y="0" width="58" height="20" uuid="7784394b-dc79-4107-918f-ae7f2136ef52"/>
+				<textFieldExpression><![CDATA[$F{BillNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="413" y="0" width="76" height="20" uuid="946b2cb5-b104-4718-917d-d70472f5a359"/>
+				<textFieldExpression><![CDATA[$F{EBillNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="506" y="0" width="83" height="20" uuid="d399805b-6909-4075-b7c3-5c58a610805c"/>
+				<textFieldExpression><![CDATA[$F{AccountNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="601" y="0" width="81" height="20" uuid="ea1104cb-6e3a-49d7-b18c-9d3bf9526a44"/>
+				<textFieldExpression><![CDATA[$F{FVoucherNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="692" y="0" width="89" height="20" uuid="73460888-710b-4305-89e8-d852c08b8382"/>
+				<textFieldExpression><![CDATA[$F{OVoucherNo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="4" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="642005eb-08e8-4bae-b782-745e200797e7"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="369f6818-428b-4b47-9dbc-93f856f144c5"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="4f86f081-8837-4bf8-8320-06fdcf896ade"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="bd55291a-0fe7-4125-87b7-6ee6610c1b3c"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="846f8592-69ad-40f5-a64e-11c706e80d60"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

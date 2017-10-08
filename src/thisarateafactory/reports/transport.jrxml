@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a2f010ca-bfd0-4d7f-bfaf-6e1316ea7db6">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="580"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[SELECT
+     turn.`turn_id` AS TurnID,
+     turn.`driver_id` AS DriverID,
+     turn.`asstdrv_id` AS AssistDriverID,
+     turn.`vehicle_id` AS VehicleID,
+     turn.`date` AS Date,
+     turn.`type` AS Type,
+     turn.`route` AS Route,
+     turn.`distance` AS Distance,
+     turn.`fuelcost` AS FuelCost,
+     turn.`otherexp` AS OtherExpenses
+FROM
+     `turn` turn]]>
+	</queryString>
+	<field name="TurnID" class="java.lang.Integer"/>
+	<field name="DriverID" class="java.lang.Integer"/>
+	<field name="AssistDriverID" class="java.lang.Integer"/>
+	<field name="VehicleID" class="java.lang.Integer"/>
+	<field name="Date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Type" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Route" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Distance" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FuelCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OtherExpenses" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="198" y="0" width="392" height="62" uuid="c2f08102-d084-4647-83e5-91f9582907bb"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Trasnport Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="284" y="62" width="224" height="22" uuid="90dde310-51e1-43ba-8ab5-f7897bef83b0"/>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Summary of Transport Details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="36b293d7-06e8-4566-b6a0-2e2b1b45c316"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="1" y="0" width="34" height="20" uuid="e9fa5955-71f4-43a2-8b75-c5d287b4ad3d"/>
+				<text><![CDATA[TurnID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="0" width="45" height="20" uuid="04340266-bac8-46df-a4d9-e30fd87b4e60"/>
+				<text><![CDATA[DriverID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="99" y="0" width="67" height="20" uuid="47705ffb-4ae1-4a1c-80a4-bfd9f73dea7e"/>
+				<text><![CDATA[AssistDriverID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="173" y="0" width="46" height="20" uuid="8f2acb5b-4def-4eae-bdca-96cb6fdb22d3"/>
+				<text><![CDATA[VehicleID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="0" width="70" height="20" uuid="4e602665-ec33-4d06-9748-9bc6f34acd3c"/>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="0" width="76" height="20" uuid="f8dc95b3-b556-47d6-b52e-b9f4707dfc4d"/>
+				<text><![CDATA[Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="396" y="0" width="100" height="20" uuid="93ac772b-6c0d-4e1d-b3d6-c85f8e92d22b"/>
+				<text><![CDATA[Route]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="508" y="0" width="65" height="20" uuid="0ad9196b-8e42-47ed-955c-e30b66483a4a"/>
+				<text><![CDATA[Distance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="590" y="0" width="62" height="20" uuid="92d4711d-1698-4440-a793-60d7e63d39ee"/>
+				<text><![CDATA[FuelCost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="682" y="0" width="70" height="20" uuid="d37a13a8-32f5-42c2-bb93-6acdb5c84ff0"/>
+				<text><![CDATA[OtherExpenses]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="772fb9c5-3f90-4b4b-ae0e-3ca581e566ba"/>
+			</frame>
+			<textField>
+				<reportElement x="1" y="0" width="34" height="20" uuid="997cc313-728e-4679-8fcf-c4dfcac838a0"/>
+				<textFieldExpression><![CDATA[$F{TurnID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="46" y="0" width="45" height="20" uuid="bbb876fd-6e9a-4026-bd10-348d9cae1e75"/>
+				<textFieldExpression><![CDATA[$F{DriverID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="99" y="0" width="67" height="20" uuid="9472ba93-dfe4-4d24-bb30-e604ea80b91b"/>
+				<textFieldExpression><![CDATA[$F{AssistDriverID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="173" y="0" width="46" height="20" uuid="bf0aa639-e4c2-4bd0-95d7-ea2b94fb83ec"/>
+				<textFieldExpression><![CDATA[$F{VehicleID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="227" y="0" width="70" height="20" uuid="14db0037-5162-4aa4-bb19-bd183a94041c"/>
+				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="0" width="76" height="20" uuid="4cd3ab9f-2629-4a2c-a757-d5111aab8b1d"/>
+				<textFieldExpression><![CDATA[$F{Type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="396" y="0" width="100" height="20" uuid="8f61eaf7-3167-4253-bd35-e9c53edeac1a"/>
+				<textFieldExpression><![CDATA[$F{Route}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="508" y="0" width="65" height="20" uuid="df94da82-6d7b-4683-be0f-3a9a72d9c488"/>
+				<textFieldExpression><![CDATA[$F{Distance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="590" y="0" width="62" height="20" uuid="a0909dc8-4900-43a8-9830-143ba4693c00"/>
+				<textFieldExpression><![CDATA[$F{FuelCost}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="682" y="0" width="70" height="20" uuid="feb68fd6-22ac-4e59-9045-7ce6da99db44"/>
+				<textFieldExpression><![CDATA[$F{OtherExpenses}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="e0534056-8b33-4dcc-9376-b2ed894a6a09"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="0e8256c7-d452-45a1-87e9-c32c6832e858"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="48a2bc79-59f6-4a2f-9f77-71e22c6fe60a"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="c1422bda-f579-4029-bd04-e87e5bb96d0e"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="d8b52016-5084-4a11-84a1-9b377eff41f6"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

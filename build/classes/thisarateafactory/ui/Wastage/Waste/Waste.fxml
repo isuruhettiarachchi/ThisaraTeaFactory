@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="836.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thisarateafactory.ui.Wastage.Waste.WasteController">
+   <children>
+      <Pane layoutX="194.0" layoutY="150.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="40.0" prefWidth="836.0" style="-fx-background-color: #1E88E5;">
+               <children>
+                  <Label text="Waste Production" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox layoutY="60.0" prefHeight="540.0" prefWidth="836.0">
+               <children>
+                  <HBox prefHeight="419.0" prefWidth="780.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <VBox prefHeight="450.0" prefWidth="335.0">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                           <children>
+                              <HBox prefHeight="62.0" prefWidth="304.0">
+                                 <children>
+                                    <Label text="Waste_ID:">
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="Waste_ID" prefHeight="37.0" prefWidth="127.0">
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="50.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="44.0" text="Date :">
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="date" prefHeight="28.0" prefWidth="143.0" text="Current date">
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <JFXComboBox fx:id="Scombo" editable="true" labelFloat="true" prefWidth="300.0" promptText="Source">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXComboBox>
+                              <JFXComboBox fx:id="Wcombo" editable="true" labelFloat="true" prefWidth="300.0" promptText="Waste Name">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXComboBox>
+                              <HBox prefHeight="50.0" prefWidth="200.0">
+                                 <children>
+                                    <Label text="Type :">
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <RadioButton fx:id="Rorganic" mnemonicParsing="false" onAction="#Organicaction" prefHeight="18.0" prefWidth="90.0" text="Organic">
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Rgroup" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="Rinorganic" mnemonicParsing="false" onAction="#Inorganicaction" prefHeight="18.0" prefWidth="86.0" text="Inorganic" toggleGroup="$Rgroup">
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </RadioButton>
+                                 </children>
+                              </HBox>
+                              <JFXTextField fx:id="Amount" labelFloat="true" promptText="Amount">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </VBox>
+                        <HBox prefHeight="390.0" prefWidth="565.0">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                           <children>
+                              <TableView fx:id="WasteTable" prefHeight="370.0" prefWidth="482.0">
+                                <columns>
+                                  <TableColumn fx:id="Wwaste" prefWidth="58.0" text="WasteID" />
+                                  <TableColumn fx:id="Wdate" prefWidth="100.0" text="Date" />
+                                    <TableColumn fx:id="Wsource" prefWidth="82.0" text="Source" />
+                                    <TableColumn fx:id="Wwastename" prefWidth="96.0" text="Waste Name" />
+                                    <TableColumn fx:id="Wtype" prefWidth="78.0" text="Type" />
+                                    <TableColumn fx:id="Wamount" prefWidth="83.0" text="Amount" />
+                                </columns>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </TableView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <TextField fx:id="Searchbutton" onAction="#Searchwaste" prefHeight="27.0" prefWidth="196.0" promptText="Search" />
+                        <JFXButton fx:id="Addbutton" onAction="#Addwaste" prefWidth="100.0" style="-fx-background-color: #1E88E5; -fx-border-color: #1E88E5;" text="Add">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="Updatebutton" onAction="#Updatewaste" prefWidth="100.0" style="-fx-background-color: #1E88E5; -fx-border-color: #1E88E5;" text="Update">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="Deletebutton" onAction="#Deletewaste" prefWidth="100.0" style="-fx-background-color: #1E88E5; -fx-border-color: #1E88E5;" text="Delete">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="Cancelbutton" onAction="#Cancelwaste" prefWidth="100.0" style="-fx-background-color: #1E88E5; -fx-border-color: #1E88E5;" text="Cancel" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

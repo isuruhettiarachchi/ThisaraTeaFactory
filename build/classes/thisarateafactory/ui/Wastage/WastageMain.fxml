@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="wastageMain" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #B2DFDB;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thisarateafactory.ui.Wastage.WastageMainController">
+   <children>
+      <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="214.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/main/recycling-bin-with-wheels.png" />
+         </image>
+      </ImageView>
+      <JFXButton contentDisplay="TOP" layoutX="119.0" layoutY="120.0" onAction="#wasteProduction" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="Wastage Production" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/waste/recycle-bin.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="306.0" layoutY="120.0" onAction="#stockLoader" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="Production Stock" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/waste/product-realise.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="306.0" layoutY="206.0" onAction="#sales" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="Sales" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/waste/payment-method.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="119.0" layoutY="206.0" onAction="#manufacturing" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="Manufacturing" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/waste/logistics-package.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="278.0" layoutY="88.0" text="Tea Supply" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

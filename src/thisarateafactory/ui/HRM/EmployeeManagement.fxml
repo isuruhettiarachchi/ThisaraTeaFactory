@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="employeeMain" prefHeight="600.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thisarateafactory.ui.HRM.EmployeeManagementController">
+   <children>
+      <VBox layoutX="125.0" layoutY="39.0" prefHeight="600.0" prefWidth="1020.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #26A69A;">
+               <children>
+                  <Label text="Current Working Employees" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children></HBox>
+            <Pane prefHeight="550.0" prefWidth="1020.0">
+               <children>
+                  <TableView fx:id="employeeView" layoutX="14.0" layoutY="48.0" prefHeight="490.0" prefWidth="609.0">
+                    <columns>
+                      <TableColumn fx:id="eidColumn" prefWidth="99.0" text="Employee ID" />
+                      <TableColumn fx:id="nicColumn" prefWidth="118.0" text="NIC" />
+                        <TableColumn fx:id="nameColumn" prefWidth="217.0" text="Name" />
+                        <TableColumn fx:id="desigColumn" prefWidth="142.0" text="Designation" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="searchBar" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="218.0" promptText="Search Employee" />
+                  <JFXButton fx:id="addButton" contentDisplay="TOP" layoutX="664.0" layoutY="249.0" onAction="#addNewEmployee" prefHeight="75.0" prefWidth="155.0" ripplerFill="#004d40" style="-fx-background-color: #26A69A; -fx-border-color: #26A69A;" text="Add New Employee" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/hrm/user-40.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="viewButton" contentDisplay="TOP" layoutX="824.0" layoutY="249.0" onAction="#viewEmployee" prefHeight="75.0" prefWidth="155.0" ripplerFill="#004d40" style="-fx-background-color: #26A69A; -fx-border-color: #26A69A;" text="View Employee" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/hrm/user-58.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="attendanceButton" contentDisplay="TOP" layoutX="664.0" layoutY="329.0" onAction="#markAttendance" prefHeight="75.0" prefWidth="155.0" ripplerFill="#004d40" style="-fx-background-color: #26A69A; -fx-border-color: #26A69A;" text="Mark Attendance" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/hrm/calendar-32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="salaryButton" contentDisplay="TOP" layoutX="824.0" layoutY="329.0" onAction="#calculateSalary" prefHeight="75.0" prefWidth="155.0" ripplerFill="#004d40" style="-fx-background-color: #26A69A; -fx-border-color: #26A69A;" text="Calculate Salary" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/hrm/138297.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="designationButton" contentDisplay="TOP" layoutX="664.0" layoutY="409.0" onAction="#setDesignationDetails" prefHeight="75.0" prefWidth="155.0" ripplerFill="#004d40" style="-fx-background-color: #26A69A; -fx-border-color: #26A69A;" text="Set Designation Details" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/hrm/file-4.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="refreshButton" contentDisplay="GRAPHIC_ONLY" layoutX="592.0" layoutY="17.0" onAction="#refreshTable" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/hrm/refresh.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="viewAllEmployeesButton" contentDisplay="TOP" layoutX="824.0" layoutY="409.0" onAction="#viewAllEmployees" prefHeight="75.0" prefWidth="155.0" ripplerFill="#004d40" style="-fx-background-color: #26A69A; -fx-border-color: #26A69A;" text="View All Employees" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/hrm/list.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton layoutX="664.0" layoutY="178.0" onAction="#generateReport" prefHeight="64.0" prefWidth="155.0" style="-fx-background-color: #26A69A;" text="Report" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

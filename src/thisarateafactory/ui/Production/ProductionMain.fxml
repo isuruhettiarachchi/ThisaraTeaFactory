@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="productionMainPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #C5CAE9;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thisarateafactory.ui.Production.ProductionMainController">
+   <children>
+      <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="189.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/main/package-for-delivery.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="dailyProductButton" contentDisplay="TOP" layoutX="120.0" layoutY="119.0" onAction="#loadDailyProduct" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #3F51B5; -fx-border-color: #3F51B5;" text="Daily Production" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/production/factory-structure.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton fx:id="qualityButton" contentDisplay="TOP" layoutX="305.0" layoutY="119.0" onAction="#loadQuality" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #3F51B5; -fx-border-color: #3F51B5;" text="Quality" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/production/quality.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton fx:id="packageButton" contentDisplay="TOP" layoutX="120.0" layoutY="206.0" onAction="#loadPackage" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #3F51B5; -fx-border-color: #3F51B5;" text="Packging" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/production/delivery-packages-on-a-trolley.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton fx:id="groceryButton" contentDisplay="TOP" layoutX="305.0" layoutY="206.0" onAction="#loadGrocery" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #3F51B5; -fx-border-color: #3F51B5;" text="Grocery" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/production/shopping-groceries.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <Label layoutX="264.0" layoutY="84.0" text="Tea Production" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2e815c42-eff8-460d-af40-c72f02244c40">
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="267"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[SELECT
+     packingdetails.`InvoiceNo` AS InvoiceNo,
+     packingdetails.`Grade` AS Grade,
+     packingdetails.`Quality` AS Quality,
+     packingdetails.`NoOfContainers` AS NoOfContainers,
+     packingdetails.`FullHalf` AS FullHalf,
+     packingdetails.`NetTotalQty` AS NetTotalQty,
+     packingdetails.`NetWeightEach` AS NetWeightEach,
+     packingdetails.`TotalGrossWeight` AS TotalGrossWeight,
+     packingdetails.`ContainerNo` AS ContainerNo,
+     packingdetails.`TypeOfPacking` AS TypeOfPacking,
+     packingdetails.`DateOfPacking` AS DateOfPacking,
+     packingdetails.`SampleAllowed` AS SampleAllowed,
+     packingdetails.`IndexNo` AS IndexNo
+FROM
+     `packingdetails` packingdetails]]>
+	</queryString>
+	<field name="InvoiceNo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Grade" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Quality" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NoOfContainers" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FullHalf" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NetTotalQty" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NetWeightEach" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TotalGrossWeight" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ContainerNo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TypeOfPacking" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DateOfPacking" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SampleAllowed" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IndexNo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="122" y="0" width="582" height="62" uuid="901670fb-32c5-430c-992d-dbebfecbcd86"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Daily Made Tea Packaging]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="303" y="62" width="220" height="22" uuid="af4378fd-6964-4159-ad99-f7288289cd08"/>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Summary of Tea Packaging]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="0283764e-337b-42de-9160-3dd3ce62c597"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="1" y="0" width="45" height="20" uuid="4d5036df-8e3d-4983-be67-5c38533886cb"/>
+				<text><![CDATA[InvoiceNo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="52" y="0" width="45" height="20" uuid="08d87408-883c-4a2d-bf6a-2cce81b8694a"/>
+				<text><![CDATA[Grade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="105" y="0" width="38" height="20" uuid="c7270b51-1ec3-4c07-949b-ae40558d96ae"/>
+				<text><![CDATA[Quality]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="153" y="0" width="60" height="20" uuid="77ba7abb-f359-403e-9653-2995d2133b39"/>
+				<text><![CDATA[Containers]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="225" y="0" width="51" height="20" uuid="34d41d23-644f-4451-b445-3ab886a5aad1"/>
+				<text><![CDATA[Full or Half]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="363" y="0" width="73" height="20" uuid="6f71f7eb-9378-4e62-b39d-63bbb5979816"/>
+				<text><![CDATA[NetWeightEach]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="452" y="0" width="81" height="20" uuid="245c5aec-720e-464a-8239-479b896826e3"/>
+				<text><![CDATA[TotalGrossWeight]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="544" y="0" width="57" height="20" uuid="cc037ea1-49a0-48b2-9be0-751a7273942b"/>
+				<text><![CDATA[ContainerNo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="613" y="0" width="69" height="20" uuid="e3c1ecf1-3330-41c9-a34b-3a95ea2875c9"/>
+				<text><![CDATA[TypeOfPacking]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="698" y="0" width="93" height="20" uuid="29e98b98-4300-4390-81fb-661c8cf6af9b"/>
+				<text><![CDATA[DateOfPacking]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="291" y="0" width="54" height="20" uuid="631327c3-8ad7-4016-86bb-ea0ec77a48e9"/>
+				<text><![CDATA[NetTotalQty]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="de097901-8a1f-4262-8096-8bc356ba3d2e"/>
+			</frame>
+			<textField>
+				<reportElement x="1" y="0" width="45" height="20" uuid="99b86ff1-631e-4a43-b71c-864159cff2bd"/>
+				<textFieldExpression><![CDATA[$F{InvoiceNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="52" y="0" width="45" height="20" uuid="eebb16c1-4fb0-4015-a430-6e08e70289cc"/>
+				<textFieldExpression><![CDATA[$F{Grade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="105" y="0" width="38" height="20" uuid="b8ddbb17-73f7-42f5-9c62-3a30770a0be3"/>
+				<textFieldExpression><![CDATA[$F{Quality}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="153" y="0" width="60" height="20" uuid="c55cafc0-3e99-4b7a-8aff-79aedfbe02d3"/>
+				<textFieldExpression><![CDATA[$F{NoOfContainers}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="225" y="0" width="51" height="20" uuid="8199ae0d-81d0-4f91-af75-aa747d024a49"/>
+				<textFieldExpression><![CDATA[$F{FullHalf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="0" width="54" height="20" uuid="2186eb18-4ec0-4d00-973b-b581c3325354"/>
+				<textFieldExpression><![CDATA[$F{NetTotalQty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="363" y="0" width="73" height="20" uuid="ac04755b-2639-40ce-8aea-b5d9130c5519"/>
+				<textFieldExpression><![CDATA[$F{NetWeightEach}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="0" width="81" height="20" uuid="11a50a2a-e1d4-45c0-98e3-3ab218d28634"/>
+				<textFieldExpression><![CDATA[$F{TotalGrossWeight}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="544" y="0" width="57" height="20" uuid="7ccf64a9-b846-4328-99f0-1bea3ee41d22"/>
+				<textFieldExpression><![CDATA[$F{ContainerNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="613" y="0" width="69" height="20" uuid="19ddadd2-3d38-4582-889c-e37954c186fb"/>
+				<textFieldExpression><![CDATA[$F{TypeOfPacking}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="700" y="0" width="93" height="20" uuid="d5c3ceaa-fc40-467d-b5b4-1a801d946269"/>
+				<textFieldExpression><![CDATA[$F{DateOfPacking}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="01cc1686-1ab1-44f4-8f71-74d9e074ef2e"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="9d0e3cd1-980d-4718-ade4-79546bdd6984"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="f0b091da-152a-488b-9e11-fff7824ebde7"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="2a8c1560-6f03-476b-ae35-c9f5118ee8a2"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="b7baafa2-8060-477b-9bc2-9fa7eec2b6f2"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="58d19d98-e117-4073-a633-2dc0d7d26524">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[SELECT
+     supplierpayment.`BillNo` AS BillNo,
+     supplierpayment.`PaidDate` AS PaidDate,
+     supplierpayment.`SupplierID` AS SupplierID,
+     supplierpayment.`SuppliedLeaves` AS SuppliedLeaves,
+     supplierpayment.`Rate` AS Rate,
+     supplierpayment.`PayAmount` AS PayAmount,
+     supplierpayment.`Transport` AS Transport,
+     supplierpayment.`GrossPayment` AS GrossPayment,
+     supplierpayment.`TeaDeduction` AS TeaDeduction,
+     supplierpayment.`CashInAdvance` AS CashInAdvance,
+     supplierpayment.`Fertilizer` AS Fertilizer,
+     supplierpayment.`NetPayment` AS NetPayment,
+     supplierpayment.`Bulkno` AS Bulkno
+FROM
+     `supplierpayment` supplierpayment]]>
+	</queryString>
+	<field name="BillNo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PaidDate" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SupplierID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SuppliedLeaves" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Rate" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PayAmount" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Transport" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="GrossPayment" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TeaDeduction" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CashInAdvance" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Fertilizer" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NetPayment" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Bulkno" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="134" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="209" y="0" width="401" height="62" uuid="111fa959-7d2a-419d-93dc-356b6c8bb22e"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Supplier Payment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="271" y="62" width="278" height="22" uuid="bc8bd415-983d-4593-9030-bb862eadbc54"/>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Summary of Tea Suppliers' Payment]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="b2285134-3b42-4e76-ac6f-e71c83381327"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="0" width="32" height="20" uuid="5dd1f9b1-134d-4ff0-8be6-7255243754bd"/>
+				<text><![CDATA[BillNo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="0" width="50" height="20" uuid="5262f6ac-ea86-4653-8925-7deac8a96cbb"/>
+				<text><![CDATA[PaidDate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="119" y="0" width="48" height="20" uuid="516ef1a0-180d-405a-aa9a-27a9e161b17b"/>
+				<text><![CDATA[SupplierID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="0" width="79" height="20" uuid="2ab3ec74-bd05-477e-8fff-616284a25eb0"/>
+				<text><![CDATA[SuppliedLeaves]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="0" width="36" height="20" uuid="fee79361-8340-49af-8519-cc0a0348e983"/>
+				<text><![CDATA[Rate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="325" y="0" width="53" height="20" uuid="87970fd6-00d9-4bf4-99a2-9467b6220e6f"/>
+				<text><![CDATA[PayAmount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="0" width="44" height="20" uuid="b7a7623f-b796-495a-9f68-6a6ad645977f"/>
+				<text><![CDATA[Transport]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="448" y="0" width="67" height="20" uuid="d8662a5f-99fa-4914-862d-052a81e32433"/>
+				<text><![CDATA[GrossPayment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="526" y="0" width="65" height="20" uuid="7b940979-e88e-40f4-a29e-dd73f005d873"/>
+				<text><![CDATA[TeaDeduction]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="603" y="0" width="72" height="20" uuid="7eac62e3-aa21-46a7-bed9-71d7b134a463"/>
+				<text><![CDATA[CashInAdvance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="689" y="0" width="43" height="20" uuid="37834de9-b595-4e73-8e61-0954e1aa2b9e"/>
+				<text><![CDATA[Fertilizer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="746" y="0" width="56" height="20" uuid="6ce836ce-6182-4aea-a9a1-9b00ac1d9365"/>
+				<text><![CDATA[NetPayment]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="ee406ec2-0303-42e9-a171-aca909b37981"/>
+			</frame>
+			<textField>
+				<reportElement x="1" y="0" width="32" height="20" uuid="454c3410-51d8-4bd1-8843-cb29edb550ba"/>
+				<textFieldExpression><![CDATA[$F{BillNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="51" y="0" width="50" height="20" uuid="7fe1a72c-5793-403a-b230-5a3547501c10"/>
+				<textFieldExpression><![CDATA[$F{PaidDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="119" y="0" width="48" height="20" uuid="a348a77b-84c7-493f-a909-bd64b7860076"/>
+				<textFieldExpression><![CDATA[$F{SupplierID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="178" y="0" width="79" height="20" uuid="c0345d4f-3879-4b37-b7fd-b50207f0ce50"/>
+				<textFieldExpression><![CDATA[$F{SuppliedLeaves}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="271" y="0" width="36" height="20" uuid="6eb29b56-d872-4538-bc35-cd052f63b9a1"/>
+				<textFieldExpression><![CDATA[$F{Rate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="325" y="0" width="53" height="20" uuid="787a880f-646f-41fa-b8ea-ae72554000ad"/>
+				<textFieldExpression><![CDATA[$F{PayAmount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="390" y="0" width="44" height="20" uuid="e42ba615-e845-4577-9a58-426d889acada"/>
+				<textFieldExpression><![CDATA[$F{Transport}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="448" y="0" width="67" height="20" uuid="8e1d5695-4b06-4558-8320-5877baccfaf3"/>
+				<textFieldExpression><![CDATA[$F{GrossPayment}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="526" y="0" width="65" height="20" uuid="07c2a236-4d32-4f4d-8902-c4e450fe3177"/>
+				<textFieldExpression><![CDATA[$F{TeaDeduction}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="603" y="0" width="72" height="20" uuid="35b0d22b-06cc-4b07-934c-364bb60ddcf0"/>
+				<textFieldExpression><![CDATA[$F{CashInAdvance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="689" y="0" width="43" height="20" uuid="a7307e45-448c-4883-9eb5-eca38f784501"/>
+				<textFieldExpression><![CDATA[$F{Fertilizer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="746" y="0" width="56" height="20" uuid="a1274b9c-b282-4062-a76d-9a70f7a6122c"/>
+				<textFieldExpression><![CDATA[$F{NetPayment}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="5ea5f774-e617-4146-a2d2-d5b2cd447b91"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="94560046-db0e-4c33-bd8f-3b627ea88fef"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="ac66369a-f8b8-4ffb-a956-8b05fe7f9999"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="720d7dfd-61cb-4e26-a646-012db5648080"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="587d48de-c786-49fb-b21f-fc9a036cd2b2"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

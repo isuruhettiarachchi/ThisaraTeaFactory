@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="17d12b6e-6413-4131-a2b5-f1f9ce5469c4">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     finalization.`Date` AS finalization_Date,
+     finalization.`TotalNetProceed` AS finalization_TotalNetProceed,
+     finalization.`TotalDeduction` AS finalization_TotalDeduction,
+     finalization.`TotalGrossProceed` AS finalization_TotalGrossProceed,
+     finalization.`Month` AS finalization_Month,
+     finalization.`LotNo` AS finalization_LotNo
+FROM
+     `finalization` finalization]]>
+	</queryString>
+	<field name="finalization_Date" class="java.sql.Date"/>
+	<field name="finalization_TotalNetProceed" class="java.lang.Double"/>
+	<field name="finalization_TotalDeduction" class="java.lang.Double"/>
+	<field name="finalization_TotalGrossProceed" class="java.lang.Double"/>
+	<field name="finalization_Month" class="java.lang.String"/>
+	<field name="finalization_LotNo" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="270" y="0" width="395" height="62" uuid="672afb80-057c-40ed-ad51-3efe056d66a9"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Sales Finalizing]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="303" y="62" width="196" height="22" uuid="64fd2f01-e0cf-4342-8d04-6a7346fd26c7"/>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Summary]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="70d8df4a-aca6-41b2-acef-a1cb642052ad"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="133" height="15" forecolor="#736343" uuid="76bead3d-3938-4096-9a67-fe6e9ad22a63"/>
+				<text><![CDATA[finalization_Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="133" y="0" width="133" height="15" forecolor="#736343" uuid="60fa5842-c878-4227-b7b7-865c8ddb4beb"/>
+				<text><![CDATA[finalization_TotalNetProceed]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="266" y="0" width="133" height="15" forecolor="#736343" uuid="a8578409-48b8-4015-81d0-53b577baf014"/>
+				<text><![CDATA[finalization_TotalDeduction]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="399" y="0" width="133" height="15" forecolor="#736343" uuid="ad6c0373-6ad0-49e4-83a1-d1c04a4867c0"/>
+				<text><![CDATA[finalization_TotalGrossProceed]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="532" y="0" width="133" height="15" forecolor="#736343" uuid="0d91c4cd-9183-45fd-9ae0-b0d00a18b69d"/>
+				<text><![CDATA[finalization_Month]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="665" y="0" width="133" height="15" forecolor="#736343" uuid="5bf3cdeb-3fc6-475b-8506-e70bf2364d37"/>
+				<text><![CDATA[finalization_LotNo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="eb3ba339-ca3b-4ce8-8642-8d903e23d130"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="0" y="0" width="133" height="15" uuid="55750b17-f0df-4bdd-90ce-62fc8baef922"/>
+					<textFieldExpression><![CDATA[$F{finalization_Date}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="133" y="0" width="133" height="15" uuid="01aa2d57-6dc4-4cc3-8867-60e3a46577c6"/>
+					<textFieldExpression><![CDATA[$F{finalization_TotalNetProceed}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="266" y="0" width="133" height="15" uuid="cd069a6a-83b7-40c6-a3a6-f95b0f74318d"/>
+					<textFieldExpression><![CDATA[$F{finalization_TotalDeduction}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="399" y="0" width="133" height="15" uuid="6de139b0-4c86-4b21-a74f-2087815f6195"/>
+					<textFieldExpression><![CDATA[$F{finalization_TotalGrossProceed}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="532" y="0" width="133" height="15" uuid="4a8a0bc1-e0da-4312-9353-62217cff0c4b"/>
+					<textFieldExpression><![CDATA[$F{finalization_Month}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="665" y="0" width="133" height="15" uuid="5ae236e4-f14e-472b-8f3c-56da1a4c0260"/>
+					<textFieldExpression><![CDATA[$F{finalization_LotNo}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="be4a373f-b7fd-4a87-8dbe-6435ccc72d98"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="893af212-e633-4144-b4d9-e2571064a814"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="ce895d81-9d38-412b-aae3-3de81b6dc159"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="5923906a-00ba-41fb-b0b0-4eb0c7d5df31"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="8506b4ca-ce44-4438-9b37-2cb79c3e8992"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

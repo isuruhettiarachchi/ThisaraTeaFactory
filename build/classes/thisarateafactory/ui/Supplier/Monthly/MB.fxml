@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thisarateafactory.ui.Supplier.Monthly.MBController">
+   <children>
+      <Pane prefHeight="650.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox layoutY="30.0" prefHeight="629.0" prefWidth="1200.0">
+               <children>
+                  <VBox prefHeight="560.0" prefWidth="341.0">
+                     <children>
+                        <HBox prefHeight="38.0" prefWidth="342.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label prefHeight="38.0" prefWidth="148.0" text="Bulk No" textAlignment="CENTER" textFill="#c3c0c0" />
+                              <JFXTextField fx:id="mbbulk" alignment="CENTER" disable="true" prefHeight="38.0" prefWidth="187.0" text="Bulk No" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="20.0" layoutY="30.0" prefHeight="38.0" prefWidth="342.0">
+                           <children>
+                              <Label prefHeight="38.0" prefWidth="148.0" text="Date" textAlignment="CENTER" textFill="#c3c0c0" />
+                              <JFXTextField fx:id="mbmonth" alignment="CENTER" disable="true" prefHeight="38.0" prefWidth="187.0" text="Date" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <JFXComboBox fx:id="mbsid" prefHeight="25.0" prefWidth="322.0" promptText="Supplier ID">
+                           <VBox.margin>
+                              <Insets left="10.0" top="20.0" />
+                           </VBox.margin>
+                        </JFXComboBox>
+                        <HBox prefHeight="40.0" prefWidth="341.0">
+                           <children>
+                              <JFXButton fx:id="totdbut" onAction="#GetTotDays" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="Total Turn" />
+                              <JFXTextField fx:id="mbdays" alignment="CENTER" disable="true" prefHeight="25.0" prefWidth="171.0" text="Days" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="24.0" prefWidth="341.0">
+                           <children>
+                              <JFXButton fx:id="mhtotbut" onAction="#CalculateTotalBulk" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="Total Bulk">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXTextField fx:id="mbtotlab" alignment="CENTER" disable="true" prefHeight="25.0" prefWidth="173.0" text="Total" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <Label prefHeight="37.0" prefWidth="317.0" text="Dividing  Tea Leave(Kg)" textFill="#979393">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="40.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Separator prefHeight="3.0" prefWidth="326.0" />
+                        <HBox alignment="CENTER" prefHeight="56.0" prefWidth="341.0">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <JFXButton fx:id="mbtranusebut" onAction="#CalTransportUsed" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="Using Transport" textFill="#320c0c">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin></JFXButton>
+                              <JFXButton fx:id="mbnotrabut" layoutX="10.0" layoutY="10.0" onAction="#CalTransportNotUse" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="Not Using Transport">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin></JFXButton>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="80.0" prefWidth="341.0">
+                           <children>
+                              <JFXTextField fx:id="mbusintlable" alignment="CENTER" disable="true" prefHeight="25.0" prefWidth="143.0" text="Using Transport">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="mbnotranl" alignment="CENTER" disable="true" prefHeight="25.0" prefWidth="144.0" text="Not Using Transport">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox prefHeight="559.0" prefWidth="750.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <children>
+                        <TableView fx:id="MBTable" prefHeight="376.0" prefWidth="750.0">
+                          <columns>
+                            <TableColumn fx:id="bnocol" prefWidth="69.0" text="Bulk No" />
+                              <TableColumn fx:id="supidcol" prefWidth="83.0" text="SupplierID" />
+                              <TableColumn fx:id="nodaycol" text="NoOfTurns" />
+                              <TableColumn fx:id="transusecol" prefWidth="129.0" text="TransportUsed" />
+                              <TableColumn fx:id="nottranscol" prefWidth="133.0" text="TransportNotUsed" />
+                              <TableColumn fx:id="totbulkcol" minWidth="9.0" prefWidth="135.0" text="TotalBulk" />
+                              <TableColumn fx:id="monthcol" minWidth="9.0" prefWidth="120.0" text="Date" />
+                          </columns>
+                        </TableView>
+                        <HBox prefHeight="0.0" prefWidth="730.0">
+                           <children>
+                              <JFXButton fx:id="mbnew" layoutX="10.0" layoutY="10.0" onAction="#NewRecord" prefHeight="25.0" prefWidth="141.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="New">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="mbadd" layoutX="10.0" layoutY="10.0" onAction="#AddRecord" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" stylesheets="@style.css" text="Add">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="mbdel" layoutX="10.0" layoutY="10.0" onAction="#DeleteRecord" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="Delete">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="mbcan" layoutX="10.0" layoutY="10.0" onAction="#Clear" prefHeight="25.0" prefWidth="154.0" style="-fx-background-color: #00796B; -fx-border-color: #00796B;" text="Cancel">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="40.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="1200.0" style="-fx-background-color: #00796B;">
+               <children>
+                  <Label text="Monthly Bulk" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

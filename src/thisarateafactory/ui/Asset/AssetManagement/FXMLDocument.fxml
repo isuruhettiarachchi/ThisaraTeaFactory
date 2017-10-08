@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thisarateafactory.ui.Asset.AssetManagement.FXMLDocumentController">
+   <children>
+      <Pane layoutX="77.0" layoutY="100.0" prefHeight="550.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TabPane prefHeight="480.0" prefWidth="627.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Payment">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="448.0" prefWidth="805.0">
+                           <children>
+                              <VBox layoutX="-9.0" layoutY="76.0" prefHeight="450.0" prefWidth="709.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="-9.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox prefHeight="400.0" prefWidth="700.0" />
+                                 </children>
+                              </VBox>
+                              <TableView fx:id="TablePayment" layoutX="10.0" layoutY="22.0" prefHeight="356.0" prefWidth="640.0">
+                                 <columns>
+                                    <TableColumn fx:id="PTable_column_Payment" prefWidth="94.0" text="Payment ID" />
+                                    <TableColumn fx:id="PTable_column_Date" prefWidth="89.0" text="Date" />
+                                    <TableColumn fx:id="PTable_column_Amount" prefWidth="83.0" text="Amount" />
+                                    <TableColumn fx:id="PTable_column_Catergory" text="Catergory" />
+                                    <TableColumn fx:id="PTable_column_TbillNo" prefWidth="72.0" text="Tele BillNo" />
+                                    <TableColumn fx:id="PTable_column_EbillNo" prefWidth="75.0" text="Elec BillNo" />
+                                    <TableColumn fx:id="PTable_column_AccNo" prefWidth="71.0" text="AccountNo" />
+                                    <TableColumn fx:id="PTable_column_FNo" prefWidth="66.0" text="FireVNo" />
+                                    <TableColumn fx:id="PTable_column_ONo" prefWidth="66.0" text="OtherVNo" />
+                                 </columns>
+                              </TableView>
+                              <JFXButton layoutX="499.0" layoutY="401.0" onAction="#generateReport" style="-fx-background-color: #00897B; -fx-border-color: #00897B;" text="Generate Report" />
+                              <JFXTextField fx:id="Psearchtxt" layoutX="179.0" layoutY="402.0" onAction="#PSearch" />
+                              <Label layoutX="61.0" layoutY="419.0" prefHeight="17.0" prefWidth="73.0" text="Search" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Electricity">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="435.0" prefWidth="600.0">
+                           <children>
+                              <VBox prefHeight="452.0" prefWidth="640.0">
+                                 <children>
+                                    <HBox prefHeight="368.0" prefWidth="634.0">
+                                       <children>
+                                          <VBox prefHeight="200.0" prefWidth="300.0">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <JFXTextField fx:id="elecBillNoText" labelFloat="true" promptText="Bill Number">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                                <JFXTextField fx:id="elecUnitsText" labelFloat="true" promptText="Units">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                                <JFXTextField fx:id="electAmountText" labelFloat="true" promptText="Amount">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                                <DatePicker fx:id="elecDate" prefHeight="25.0" prefWidth="291.0" promptText="Date">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </DatePicker>
+                                                <Label prefHeight="28.0" prefWidth="171.0" text="                     Search" />
+                                                <JFXTextField fx:id="elecSearchDetailstxt" labelFloat="true" layoutX="20.0" layoutY="65.0" onAction="#SearchDetails" prefHeight="25.0" prefWidth="276.0" promptText="Search">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                                <Label prefHeight="17.0" prefWidth="147.0" text="Total Arrears" />
+                                                <Label fx:id="ElecTAmountLable" prefHeight="17.0" prefWidth="211.0" />
+                                                <Label prefHeight="17.0" prefWidth="146.0" />
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="401.0" prefWidth="424.0">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <TableView fx:id="TableElectricity" prefHeight="334.0" prefWidth="346.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="ETable_column_BillNo" text="Bill Number" />
+                                                      <TableColumn fx:id="ETable_column_Unit" prefWidth="59.0" text="Unit" />
+                                                      <TableColumn fx:id="ETable_column_Amount" minWidth="5.0" prefWidth="63.0" text="Amount" />
+                                                      <TableColumn fx:id="ETable_column_Date" minWidth="0.0" text="Date" />
+                                                      <TableColumn fx:id="ETable_column_Pay" minWidth="0.0" prefWidth="60.0" text="Pay" />
+                                                   </columns>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </TableView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="57.0" prefWidth="623.0">
+                                       <children>
+                                          <JFXButton fx:id="elecButtonAdd" onAction="#elecDetailsAdd" prefWidth="100.0" stylesheets="@style.css" text="Add">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="elecUpdateBtn" onAction="#elecupdate" prefWidth="100.0" stylesheets="@style.css" text="Update">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="Ass_E_BTNDelete" onAction="#Ass_E_delete" prefWidth="100.0" stylesheets="@style.css" text="Delete">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="Ass_E_BTNPay" layoutX="430.0" layoutY="48.0" onAction="#Ass_E_Pay" prefWidth="100.0" stylesheets="@style.css" text="pay" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Firewood">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="453.0" prefWidth="640.0">
+                                 <children>
+                                    <HBox prefHeight="400.0" prefWidth="700.0">
+                                       <children>
+                                          <VBox prefHeight="200.0" prefWidth="300.0">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <JFXTextField fx:id="firevoucherNoText" labelFloat="true" promptText="Voucher Number">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                                <JFXTextArea fx:id="fireaddresstxt" labelFloat="true" prefHeight="100.0" promptText="Address">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextArea>
+                                                <JFXTextField fx:id="fireCostTxt" labelFloat="true" layoutX="20.0" layoutY="20.0" promptText="Cost">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                                <JFXTextField fx:id="FSearchDetailstxt1" labelFloat="true" onAction="#FSearchDetails" prefHeight="25.0" prefWidth="276.0" promptText="Search">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="380.0" prefWidth="423.0">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <TableView fx:id="FireTable" prefHeight="359.0" prefWidth="346.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="fireVoucherClmn" prefWidth="108.0" text="Voucher Number" />
+                                                      <TableColumn fx:id="fireAddressClmn" prefWidth="72.0" text="Address" />
+                                                      <TableColumn fx:id="fireDateClmn" prefWidth="89.0" text="Date" />
+                                                      <TableColumn fx:id="fireCostClmn" prefWidth="73.0" text="Cost" />
+                                                   </columns>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </TableView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="66.0" prefWidth="665.0">
+                                       <children>
+                                          <JFXButton fx:id="FAddBtn" onAction="#Fadd" prefHeight="25.0" prefWidth="207.0" stylesheets="@style.css" text="Pay">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Telephone">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="521.0" prefWidth="627.0">
+                                 <children>
+                                    <HBox prefHeight="400.0" prefWidth="700.0">
+                                       <children>
+                                          <VBox prefHeight="200.0" prefWidth="300.0">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <JFXTextField fx:id="TbillNoTxt" labelFloat="true" promptText="Bill Number">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                                <JFXTextField fx:id="TphoneNoTxt" labelFloat="true" promptText="Phone Number">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                                <JFXTextField fx:id="TamountTxt" labelFloat="true" layoutX="20.0" layoutY="65.0" prefHeight="19.0" prefWidth="288.0" promptText="Amount">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                                <DatePicker fx:id="TDate" promptText="Date" />
+                                                <JFXTextField fx:id="TPSearchDetailstxt1" labelFloat="true" onAction="#TPSearchDetails" prefHeight="25.0" prefWidth="276.0" promptText="Search">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                                <Label prefHeight="17.0" prefWidth="76.0" text="Total Arrears" />
+                                                <Label fx:id="TeleLable" prefHeight="30.0" prefWidth="226.0" />
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="373.0" prefWidth="432.0">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <TableView fx:id="TableTelephone" prefHeight="391.0" prefWidth="479.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="TBillNOcolumn_" prefWidth="72.0" text="Bill Number" />
+                                                      <TableColumn fx:id="TPhoneNumbercolumn" prefWidth="90.0" text="Phone Number" />
+                                                      <TableColumn fx:id="TAmountcolumn" prefWidth="53.0" text="Amount" />
+                                                      <TableColumn fx:id="TDatecolumn" prefWidth="89.0" text="Date" />
+                                                      <TableColumn fx:id="TPaycolumn" minWidth="0.0" prefWidth="0.0" text="Pay" />
+                                                      <TableColumn fx:id="TPaycolumn" prefWidth="39.0" text="Pay" />
+                                                   </columns>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </TableView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="57.0" prefWidth="700.0">
+                                       <children>
+                                          <JFXButton fx:id="TAddBtn" onAction="#TPDetailsAdd" prefWidth="100.0" stylesheets="@style.css" text="Add">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="TUpdateBtn" onAction="#TPUpdate" prefWidth="100.0" stylesheets="@style.css" text="Update">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="TDeleteBtn" onAction="#TPDelete" prefWidth="100.0" stylesheets="@style.css" text="Delete">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="TPay" onAction="#Tpay" prefHeight="25.0" prefWidth="94.0" stylesheets="@style.css" text="Pay">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Other">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="521.0" prefWidth="700.0">
+                                 <children>
+                                    <HBox prefHeight="395.0" prefWidth="685.0">
+                                       <children>
+                                          <VBox prefHeight="200.0" prefWidth="300.0">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <JFXTextField fx:id="OVNuber" labelFloat="true" promptText="Voucher Number">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                                <JFXTextField fx:id="OGFCost" labelFloat="true" promptText="Generator Fuel Cost">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                                <JFXTextField fx:id="ORAPayment" labelFloat="true" promptText="Over Rate Additional Payment">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                                <JFXTextField fx:id="SLoan" labelFloat="true" promptText="Supplier Loan">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                                <JFXTextField fx:id="OSearchDetailstxt" labelFloat="true" onAction="#OSearchDetails" prefHeight="25.0" prefWidth="276.0" promptText="Search">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="400.0" prefWidth="558.0">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <TableView fx:id="OtherTable" prefHeight="404.0" prefWidth="314.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="OVNoClmn" prefWidth="75.0" text="VoucherNO" />
+                                                      <TableColumn fx:id="GFCClmn" prefWidth="75.0" text="G Fule Cost" />
+                                                      <TableColumn fx:id="ORAPaymentClmn" prefWidth="81.0" text="Over Rate AD" />
+                                                      <TableColumn fx:id="SloanClmn" minWidth="2.0" prefWidth="59.0" text="S Loan" />
+                                                      <TableColumn fx:id="ODateClmn" prefWidth="97.0" text="Date" />
+                                                   </columns>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </TableView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="59.0" prefWidth="695.0">
+                                       <children>
+                                          <JFXButton fx:id="OAddBtn" onAction="#OAdd" prefHeight="25.0" prefWidth="160.0" stylesheets="@style.css" text="Pay">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                <Tab text="Bank Expenses">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="146.0" layoutY="75.0" prefHeight="521.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox prefHeight="386.0" prefWidth="655.0">
+                                       <children>
+                                          <VBox prefHeight="200.0" prefWidth="300.0">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <JFXTextField fx:id="BaccountTXT" labelFloat="true" promptText="Account Number">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                                <JFXTextField fx:id="BnameTXT" labelFloat="true" promptText="Bank Name">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                                <JFXTextArea fx:id="BdescreptionTXT" labelFloat="true" prefHeight="100.0" promptText="Description">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextArea>
+                                                <JFXTextField fx:id="BCostTxt" labelFloat="true" promptText="Cost">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                                <JFXTextField fx:id="BSearchDetailstxt11" labelFloat="true" onAction="#BSearchDetails" prefHeight="25.0" prefWidth="276.0" promptText="Search">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="372.0" prefWidth="542.0">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <TableView fx:id="BankTable" prefHeight="331.0" prefWidth="435.0">
+                                                  <columns>
+                                                    <TableColumn fx:id="BAcoountClmn" prefWidth="74.0" text="Account NO" />
+                                                    <TableColumn fx:id="BNameClmn" prefWidth="74.0" text="Bank Name" />
+                                                      <TableColumn fx:id="BDescriptionClmn" prefWidth="104.0" text="Discription" />
+                                                      <TableColumn fx:id="BCostClmn" prefWidth="55.0" text="Cost" />
+                                                      <TableColumn fx:id="BDateClmn" minWidth="4.0" prefWidth="87.0" text="Date" />
+                                                  </columns>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </TableView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <JFXButton fx:id="BpayBtn" onAction="#Bpay" prefHeight="25.0" prefWidth="301.0" stylesheets="@style.css" text="Pay">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

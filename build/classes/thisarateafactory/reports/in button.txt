@@ -1,0 +1,10 @@
+        try{
+            String is = "C:\\reports\\transport.jrxml";
+            JasperReport jr =JasperCompileManager.compileReport(is);
+            JasperPrint jp =JasperFillManager.fillReport(jr,null,con);
+            JasperViewer.viewReport(jp,false);
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
